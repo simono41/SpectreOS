@@ -1,0 +1,6 @@
+# If running from tty1 start sway
+if [ "$(tty)" = "/dev/tty1" ]; then
+  val=$(udevadm info -a -n /dev/dri/card1 | grep boot_vga | rev | cut -c 2)
+  cmd="WLR_DRM_DEVICES=/dev/dri/card$val sway"
+  if ! eval "$cmd"; then sway; fi
+fi

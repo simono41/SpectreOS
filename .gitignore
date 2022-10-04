@@ -1,0 +1,4 @@
+builds/
+tmp/
+out/
+configs/grub.d/10_linux.original

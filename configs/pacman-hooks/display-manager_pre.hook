@@ -1,0 +1,9 @@
+[Trigger]
+Operation = Upgrade
+Type = Package
+Target = sddm
+
+[Action]
+Description = Save sddm display-manager config befor updating
+When = PreTransaction
+Exec = /bin/bash -c "cp /usr/lib/sddm/sddm.conf.d/default.conf /tmp/sddm.conf"

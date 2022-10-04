@@ -1,0 +1,60 @@
+dhcpcd nano vim intel-ucode amd-ucode iwd lvm2 btrfs-progs arch-install-scripts
+squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie
+acpid dbus avahi
+cups hplip
+alacritty
+ark
+base base-devel linux linux-firmware
+bashtop
+browserpass
+browserpass-chromium
+browserpass-firefox
+capitaine-cursors
+chezmoi
+chromium
+cmake gradle
+code
+filezilla
+firefox-dark-reader
+firefox-i18n-de
+firefox-ublock-origin
+gimp
+git
+gnupg
+gparted
+grim
+gvfs
+htop
+jre-openjdk
+lxde-gtk3 xfce4 mousepad
+network-manager-applet
+networkmanager
+networkmanager-openvpn
+networkmanager-qt
+nm-connection-editor
+noto-fonts
+noto-fonts-emoji
+noto-fonts-extra
+opus-tools vorbis-tools flac ffmpeg
+pixz
+pkg-config gcc
+polkit
+python
+qemu-system-x86
+sway i3-gaps i3status-rust
+swaybg
+swayidle
+swaylock
+syncthing
+vlc
+wine
+wine-gecko
+wine-mono
+winetricks
+wireguard-tools
+xarchiver
+xdg-user-dirs
+xdg-user-dirs-gtk
+xorg-server xorg-xinit xorg-drivers
+xournalpp libreoffice
+yt-dlp

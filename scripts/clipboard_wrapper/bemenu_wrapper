@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+set -euo pipefail
+
+wl-clipboard-history -p "$(wl-clipboard-history -l 20 | bemenu -i --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:DejaVu Sans Mono 12" | cut -d ',' -f1)" | wl-copy

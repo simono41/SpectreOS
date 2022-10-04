@@ -1,0 +1,10 @@
+#!/bin/sh
+
+pinentry_shell="pinentry-tty"
+pinentry_gui="pinentry-qt"
+
+if [ "$WAYLAND_DISPLAY" = "" -o "$PINENTRY_USER_DATA" = "USE_TTY=1" ]; then
+    exec $pinentry_shell "$@"
+fi
+
+exec env DISPLAY=$WAYLAND_DISPLAY $pinentry_gui "$@"

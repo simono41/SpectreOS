@@ -1,0 +1,11 @@
+[Unit]
+Description=startup shell commands for Desktop Graphic-card usw.
+Before=display-manager.service
+
+[Service]
+User=root
+Type=simple
+ExecStart=/usr/bin/startup-script
+
+[Install]
+WantedBy=multi-user.target

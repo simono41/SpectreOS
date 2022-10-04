@@ -1,0 +1,29 @@
+run_hook ()
+{
+    # Format and run immediately cow_device
+
+    if [[ "${format}" == "y" ]]; then
+        sfdisk -l
+
+        [[ -z "${formatdevice}" ]] && formatdevice=/dev/sda
+        [[ -z "${formatpartition}" ]] && formatpartition=3
+
+        fdisk ${formatdevice} <<EOT
+p
+n
+
+
+
+
+p
+w
+EOT
+        
+        mkfs.btrfs -f -L cow_device ${formatdevice}${formatpartition}
+
+        reboot -f
+    fi
+
+}
+
+# vim: set ft=sh ts=4 sw=4 et:
