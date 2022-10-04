@@ -598,12 +598,12 @@ function installation {
     parameter="${parameter}keyboard fsck "
 
     if [ "${nvidia}" == "y" ]; then
-        echo "MODULES=\"amdgpu nvidia i915 radeon\"" > ${mountpoint}/etc/mkinitcpio.conf
+        echo "MODULES=\"amdgpu i915 nvidia\"" > ${mountpoint}/etc/mkinitcpio.conf
         echo "HOOKS=\"${parameter}\"" >> ${mountpoint}/etc/mkinitcpio.conf
         echo "COMPRESSION=\"zstd\"" >> ${mountpoint}/etc/mkinitcpio.conf
         echo "blacklist nouveau" > ${mountpoint}/etc/modprobe.d/blacklist-nouveau.conf
     else
-        echo "MODULES=\"amdgpu i915 radeon nouveau\"" > ${mountpoint}/etc/mkinitcpio.conf
+        echo "MODULES=\"amdgpu i915 nouveau\"" > ${mountpoint}/etc/mkinitcpio.conf
         echo "HOOKS=\"${parameter}\"" >> ${mountpoint}/etc/mkinitcpio.conf
         echo "COMPRESSION=\"zstd\"" >> ${mountpoint}/etc/mkinitcpio.conf
     fi

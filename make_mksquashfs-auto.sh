@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+<#!/usr/bin/env bash
 #
 set -ex
 
@@ -95,7 +95,7 @@ function system() {
         echo "install dell-smbios /bin/false" > ${work_dir}/${arch}/airootfs/etc/modprobe.d/blacklist-dell-smbios.conf
         
         # modules
-        echo "MODULES=\"amdgpu i915 radeon nvidia fuse loop\"" > ${work_dir}/${arch}/airootfs/etc/mkinitcpio.conf
+        echo "MODULES=\"amdgpu i915 nouveau fuse loop\"" > ${work_dir}/${arch}/airootfs/etc/mkinitcpio.conf
         echo "HOOKS=\"base udev keyboard keymap consolefont modconf archiso block filesystems\"" >> ${work_dir}/${arch}/airootfs/etc/mkinitcpio.conf
         echo "COMPRESSION=\"zstd\"" >> ${work_dir}/${arch}/airootfs/etc/mkinitcpio.conf
     fi
