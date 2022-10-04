@@ -451,11 +451,6 @@ cp /opt/${repo}/desktop/arch-install.desktop /usr/share/applications/arch-instal
 mkdir -p /usr/share/pixmaps/
 cp /opt/${repo}/desktop/install.png /usr/share/pixmaps/
 
-# background
-mkdir -p /usr/share/backgrounds/xfce/
-cp /opt/${repo}/desktop-bilder/*.jpg /usr/share/backgrounds/xfce/
-chmod 755 -R /usr/share/backgrounds/xfce/
-
 # grub_background
 mkdir -p /usr/share/grub/
 cp /opt/${repo}/grub/grub_background.png /usr/share/grub/background.png
