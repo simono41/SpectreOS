@@ -1,6 +1,6 @@
 dhcpcd nano vim intel-ucode amd-ucode iwd lvm2 btrfs-progs arch-install-scripts
 squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie
-acpid dbus avahi ntp
+acpid dbus avahi ntp fail2ban
 keychain
 cups hplip
 alacritty
