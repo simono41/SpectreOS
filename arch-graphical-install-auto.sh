@@ -639,7 +639,7 @@ if [ "${archisoinstall}" == "y" ]; then
     links
 fi
 
-su ${user} -c "chezmoi init --apply https://git.spectreos.de/simono41/dotfiles.git"
+su ${user} -c "chezmoi init --force --apply https://git.spectreos.de/simono41/dotfiles.git"
 su ${user} -c "chezmoi update -v"
 userrechte
 
