@@ -44,7 +44,7 @@ function minimalinstallation() {
     cp -v /opt/${repo}/configs/install/* ${mountpoint}/usr/lib/initcpio/install/
     cp -v /opt/${repo}/configs/hooks/* ${mountpoint}/usr/lib/initcpio/hooks/
     cp -v /opt/${repo}/configs/script-hooks/* ${mountpoint}/usr/lib/initcpio/
-    
+
     mkdir -p ${mountpoint}/etc/pacman.d/hooks
     cp -v /opt/${repo}/configs/pacman-hooks/* ${mountpoint}/etc/pacman.d/hooks/
     cp -v /opt/${repo}/pacman.conf ${mountpoint}/etc/pacman.conf
@@ -1223,10 +1223,6 @@ function abfrage() {
 
         fi
 
-        echo "The desktop environments installed by default are sway (preconfigured) or CLI (only for CLI versions!!!)"
-        read -p "Which desktop environment should be started by default?? : [SWAY/i3/plasma/lxqt/gnome/xfce4/cli] " autostartdesktop
-        [[ -z "${autostartdesktop}" ]] && autostartdesktop="sway"
-
         read -p "Should you autologin in youre System? : [Y/n] " autologin
         [[ -z "${autologin}" ]] && autologin=y
 
@@ -1588,7 +1584,14 @@ cp /opt/${repo}/configs/config.fish ${mountpoint}/root/.config/fish/config.fish
 touch ${mountpoint}/root/.bash_profile
 touch ${mountpoint}/home/"${user}"/.bash_profile
 
-mkdir -p ${mountpoint}/etc/X11/xinit/
+if [ ${autologin} != "n" ]; then
+    mkdir -p ${mountpoint}/etc/systemd/system/getty\@tty1.service.d/
+    echo "[Service]" > ${mountpoint}/etc/systemd/system/getty\@tty1.service.d/autologin.conf
+    echo "ExecStart=" >> ${mountpoint}/etc/systemd/system/getty\@tty1.service.d/autologin.conf
+    echo "ExecStart=-/usr/bin/agetty --autologin ${user} -s %I 115200,38400,9600 vt102" >> ${mountpoint}/etc/systemd/system/getty\@tty1.service.d/autologin.conf
+else
+    rm ${mountpoint}/etc/systemd/system/getty\@tty1.service.d/autologin.conf
+fi
 
 if [ -f "/etc/locale.conf" ]; then cp /etc/locale.conf ${mountpoint}/etc/locale.conf; fi
 if [ -f "/etc/vconsole.conf" ]; then cp /etc/vconsole.conf ${mountpoint}/etc/vconsole.conf; fi
