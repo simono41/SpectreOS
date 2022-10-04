@@ -1590,14 +1590,6 @@ touch ${mountpoint}/home/"${user}"/.bash_profile
 
 mkdir -p ${mountpoint}/etc/X11/xinit/
 
-if [ ${autologin} != "n" ]; then
-    sed -i 's/User=.*$/User='$user'/' /etc/sddm.conf.d/kde_settings.conf
-else
-    sed -i 's/User=.*$/User=/' /etc/sddm.conf.d/kde_settings.conf
-fi
-#sed -i 's/Current=.*$/Current=\/usr\/share\/sddm\/themes\/maldives/' /etc/sddm.conf
-sed -i 's/MinimumVT=.*$/MinimumVT=7/' /etc/sddm.conf
-
 if ! grep 'setxkbmap' /usr/share/sddm/scripts/Xsetup; then
     echo "setxkbmap de" >> /usr/share/sddm/scripts/Xsetup
 fi

@@ -635,17 +635,6 @@ if ! [ -f "/etc/X11/xorg.conf.d/40-libinput.conf" ]; then
     ln -s /usr/share/X11/xorg.conf.d/40-libinput.conf /etc/X11/xorg.conf.d/40-libinput.conf
 fi
 
-# SDDM Config
-# use for configuration kcmshell5 sddm or systemsettings5
-
-cp /opt/${repo}/configs/sddm.conf /etc/sddm.conf
-cp -R /opt/${repo}/configs/sddm.conf.d /etc/
-cp -R /opt/${repo}/sddm-themes/sugar-candy /usr/share/sddm/themes/
-
-sed -i 's/User=.*$/User='$user'/' /etc/sddm.conf.d/kde_settings.conf
-#sed -i 's/Current=.*$/Current=\/usr\/share\/sddm\/themes\/maldives/' /etc/sddm.conf
-sed -i 's/MinimumVT=.*$/MinimumVT=7/' /etc/sddm.conf
-
 if ! grep 'setxkbmap' /usr/share/sddm/scripts/Xsetup; then
     echo "setxkbmap de" >> /usr/share/sddm/scripts/Xsetup
 fi
