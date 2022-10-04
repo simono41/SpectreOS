@@ -3,7 +3,12 @@ squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie 
 acpid dbus avahi ntp fail2ban alsa-utils alsa-tools bash-completion
 pulseaudio pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-alsa pavucontrol pamixer
 blueman bluez-tools pipewire pipewire-media-session
-mesa-utils egl-wayland
+mesa-utils egl-wayland wofi
+lib32-vulkan-icd-loader
+lib32-vulkan-intel
+lib32-vulkan-mesa-layers
+lib32-vulkan-radeon
+lib32-vulkan-validation-layers
 vulkan-headers
 vulkan-icd-loader
 vulkan-intel
