@@ -1590,10 +1590,6 @@ touch ${mountpoint}/home/"${user}"/.bash_profile
 
 mkdir -p ${mountpoint}/etc/X11/xinit/
 
-if ! grep 'setxkbmap' /usr/share/sddm/scripts/Xsetup; then
-    echo "setxkbmap de" >> /usr/share/sddm/scripts/Xsetup
-fi
-
 if [ -f "/etc/locale.conf" ]; then cp /etc/locale.conf ${mountpoint}/etc/locale.conf; fi
 if [ -f "/etc/vconsole.conf" ]; then cp /etc/vconsole.conf ${mountpoint}/etc/vconsole.conf; fi
 if [ -f "/etc/locale.gen" ]; then cp /etc/locale.gen ${mountpoint}/etc/locale.gen; fi

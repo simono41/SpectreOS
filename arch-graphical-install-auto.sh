@@ -635,10 +635,6 @@ if ! [ -f "/etc/X11/xorg.conf.d/40-libinput.conf" ]; then
     ln -s /usr/share/X11/xorg.conf.d/40-libinput.conf /etc/X11/xorg.conf.d/40-libinput.conf
 fi
 
-if ! grep 'setxkbmap' /usr/share/sddm/scripts/Xsetup; then
-    echo "setxkbmap de" >> /usr/share/sddm/scripts/Xsetup
-fi
-
 if [ "${archisoinstall}" == "y" ]; then
     links
 fi
