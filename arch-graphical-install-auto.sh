@@ -14,12 +14,13 @@ RCLOCALSHUTDOWN='/etc/rc.local.shutdown'
 SYSCTL='/etc/sysctl.conf'
 SUDOERS="/etc/sudoers"
 autostartdesktop=sway
-repo=deadc0de-remix-os
+repo=spectreos
 repo1=shell-scripte-code
-hostname=deadc0de-remix-os
+hostname=spectreos
 user=user1
 userpass=user1
 arch=$(uname -m)
+branch=master
 offline=false
 
 # Lese die Umgebungsvariablen neu
@@ -71,13 +72,13 @@ function gitclone() {
         if [ -d "/opt/${repo}" ]; then
             echo "${repo} existiert bereits!!!"
             cd /opt/${repo}
-            git checkout ${arch}
+            git checkout ${branch}
             if ! git remote set-url origin ${WEBADDRESS_OS}; then
                 git remote add origin ${WEBADDRESS_OS}
             fi
             git pull
         else
-            git clone -b ${arch} ${WEBADDRESS_OS} /opt/${repo}
+            git clone -b ${branch} ${WEBADDRESS_OS} /opt/${repo}
         fi
         if [ -d "/opt/${repo1}" ]; then
             echo "${repo1} existiert bereits!!!"
@@ -670,7 +671,7 @@ fi
 aurinstaller ntfysh-bin
 #aurinstaller spotify
 #aurinstaller https://github.com/MultiMC/multimc-pkgbuild
-#aurinstaller polymc-bin
+aurinstaller polymc-bin
 aurinstaller beautysh
 #aurinstaller jetbrains-toolbox
 aurinstaller wdisplays
