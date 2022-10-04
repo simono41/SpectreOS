@@ -639,8 +639,8 @@ if [ "${archisoinstall}" == "y" ]; then
     links
 fi
 
-su testbenutzer -c "chezmoi init --apply https://git.spectreos.de/simono41/dotfiles.git"
-su testbenutzer -c "chezmoi update -v"
+su ${user} -c "chezmoi init --apply https://git.spectreos.de/simono41/dotfiles.git"
+su ${user} -c "chezmoi update -v"
 userrechte
 
 # https://aur.archlinux.org/packages/ttf-font-nerd-dummy
