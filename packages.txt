@@ -4,6 +4,7 @@ acpid dbus avahi ntp fail2ban
 pulseaudio pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-alsa pavucontrol
 blueman bluez-tools
 keychain
+starship
 cups hplip
 alacritty
 ark

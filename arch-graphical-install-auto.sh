@@ -639,9 +639,8 @@ if [ "${archisoinstall}" == "y" ]; then
     links
 fi
 
-su ${user} -c "chezmoi init --force --apply https://git.spectreos.de/simono41/dotfiles.git"
+su ${user} -c "chezmoi init --apply https://git.spectreos.de/simono41/dotfiles.git"
 su ${user} -c "chezmoi update -v"
-userrechte
 
 # https://aur.archlinux.org/packages/ttf-font-nerd-dummy
 # I was going to delete it because at the moment the only package that provides ttf-font-nerd is ttf-iosevka-nerd (see this search entry),
