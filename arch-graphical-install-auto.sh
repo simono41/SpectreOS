@@ -653,7 +653,7 @@ fi
 
 #aurinstaller conky-lua-nv
 #aurinstaller passdmenu
-aurinstaller ntfysh-bin
+#aurinstaller ntfysh-bin
 #aurinstaller spotify
 #aurinstaller https://github.com/MultiMC/multimc-pkgbuild
 aurinstaller polymc-bin
