@@ -3,7 +3,7 @@ squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie 
 acpid dbus avahi ntp fail2ban alsa-utils alsa-tools bash-completion
 pulseaudio pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-alsa pavucontrol pamixer
 blueman bluez-tools pipewire pipewire-media-session
-mesa-utils egl-wayland wofi
+mesa-utils egl-wayland wofi mako
 at-spi2-core
 python-atspi
 lib32-at-spi2-core
