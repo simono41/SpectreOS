@@ -1,13 +1,57 @@
-dhcpcd nano vim intel-ucode amd-ucode iwd lvm2 btrfs-progs arch-install-scripts
+dhcpcd nano vim vim-spell-de intel-ucode amd-ucode iwd lvm2 btrfs-progs arch-install-scripts
 squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie memtest86+
-acpid dbus avahi ntp fail2ban
+acpid dbus avahi ntp fail2ban alsa-utils alsa-tools bash-completion
 pulseaudio pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-alsa pavucontrol pamixer
-blueman bluez-tools
+blueman bluez-tools pipewire pipewire-media-session
+mesa-utils egl-wayland
+vulkan-headers
+vulkan-icd-loader
+vulkan-intel
+vulkan-mesa-layers
+vulkan-radeon
+vulkan-tools
+pango papirus-icon-theme pass pass-otp
+ttc-iosevka
+ttf-bitstream-vera
+ttf-carlito
+ttf-dejavu
+ttf-fantasque-sans-mono
+ttf-fira-code
+ttf-fira-mono
+ttf-fira-sans
+ttf-font-awesome
+ttf-hack
+ttf-jetbrains-mono
+ttf-liberation
+ttf-nerd-fonts-symbols-2048-em
+ttf-nerd-fonts-symbols-common
+ttf-opensans
+gst-libav
+gst-plugin-gtk
+gst-plugin-pipewire
+gst-plugins-bad
+gst-plugins-bad-libs
+gst-plugins-base
+gst-plugins-base-libs
+gst-plugins-good
+gst-plugins-ugly
+gvfs
+gvfs-afc
+gvfs-goa
+gvfs-google
+gvfs-gphoto2
+gvfs-mtp
+gvfs-nfs
+gvfs-smb
+pdfmod
+gstreamer
 keychain
 starship
 cups hplip
 alacritty
-ark
+arc-gtk-theme
+arc-icon-theme
+arc-solid-gtk-theme
 base base-devel linux linux-firmware
 bashtop
 browserpass
@@ -29,7 +73,6 @@ git
 gnupg
 gparted
 grim
-gvfs
 htop
 jre-openjdk
 lxde-gtk3 xfce4 mousepad
@@ -65,5 +108,6 @@ xarchiver
 xdg-user-dirs
 xdg-user-dirs-gtk
 xorg-server xorg-xinit xorg-drivers
-xournalpp libreoffice libwacom xf86-input-wacom
+xournalpp libreoffice libreoffice-fresh-de
+libwacom xf86-input-wacom
 yt-dlp

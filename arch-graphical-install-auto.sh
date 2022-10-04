@@ -547,31 +547,8 @@ sed 's|%VERSION%|'$pacmanversion'|' -i /etc/pacman.d/hooks/pacmanconf.hook
 # nano
 echo "include "/usr/share/nano/*.nanorc"" > /etc/nanorc
 
-# htop
-echo "fields=0 48 17 18 38 39 40 2 46 47 49 1
-sort_key=46
-sort_direction=-1
-hide_threads=0
-hide_kernel_threads=1
-hide_userland_threads=0
-shadow_other_users=0
-highlight_base_name=1
-highlight_megabytes=1
-highlight_threads=1
-tree_view=1
-header_margin=1
-detailed_cpu_time=1
-color_scheme=0
-delay=15
-left_meters=AllCPUs Memory Swap
-left_meter_modes=1 1 1
-right_meters=Tasks LoadAverage Uptime
-right_meter_modes=2 2 2 " > /home/${user}/.htoprc
-
-if ! [ "${version%-*}" == "libre-openrc" ] && ! [ "${version%-*}" == "openrc" ]; then
-
-    # Install rc.local
-    echo "[Unit]
+# Install rc.local
+echo "[Unit]
 Description=/etc/rc.local compatibility
 
 [Service]
@@ -580,22 +557,22 @@ ExecStart=/etc/rc.local
 RemainAfterExit=yes
 
 [Install]
-    WantedBy=multi-user.target" > /etc/systemd/system/rc-local.service
-    touch $RCLOCAL
-    chmod +x $RCLOCAL
-    systemctl enable rc-local.service
-    if ! grep '#!' $RCLOCAL; then
-        echo "#!/bin/bash" > $RCLOCAL
-    fi
+WantedBy=multi-user.target" > /etc/systemd/system/rc-local.service
+touch $RCLOCAL
+chmod +x $RCLOCAL
+systemctl enable rc-local.service
+if ! grep '#!' $RCLOCAL; then
+    echo "#!/bin/bash" > $RCLOCAL
+fi
 
-    if ! grep 'setcap cap_net_raw+ep /bin/ping' $RCLOCAL; then
-        echo "setcap cap_net_raw+ep /bin/ping" >> $RCLOCAL
-    fi
+if ! grep 'setcap cap_net_raw+ep /bin/ping' $RCLOCAL; then
+    echo "setcap cap_net_raw+ep /bin/ping" >> $RCLOCAL
+fi
 
 
-    # Install rc.shutdown
+# Install rc.shutdown
 
-    echo "[Unit]
+echo "[Unit]
 Description=/etc/rc.local.shutdown Compatibility
 ConditionFileIsExecutable=/etc/rc.local.shutdown
 DefaultDependencies=no
@@ -609,13 +586,12 @@ StandardInput=tty
 RemainAfterExit=yes
 
 [Install]
-    WantedBy=multi-user.target" > /etc/systemd/system/rc-local-shutdown.service
-    touch $RCLOCALSHUTDOWN
-    chmod +x $RCLOCALSHUTDOWN
-    systemctl enable rc-local-shutdown.service
-    if ! grep '#!' $RCLOCALSHUTDOWN; then
-        echo "#!/bin/bash" > $RCLOCALSHUTDOWN
-    fi
+WantedBy=multi-user.target" > /etc/systemd/system/rc-local-shutdown.service
+touch $RCLOCALSHUTDOWN
+chmod +x $RCLOCALSHUTDOWN
+systemctl enable rc-local-shutdown.service
+if ! grep '#!' $RCLOCALSHUTDOWN; then
+    echo "#!/bin/bash" > $RCLOCALSHUTDOWN
 fi
 
 # set desktop
