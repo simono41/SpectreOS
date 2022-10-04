@@ -4,7 +4,6 @@ acpid dbus avahi ntp fail2ban alsa-utils alsa-tools bash-completion
 pulseaudio pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-alsa pavucontrol pamixer
 blueman bluez-tools pipewire pipewire-media-session
 mesa-utils egl-wayland wofi
-at-spi2-atk
 at-spi2-core
 python-atspi
 lib32-at-spi2-atk
