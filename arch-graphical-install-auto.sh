@@ -495,19 +495,6 @@ else
 fi
 cd /
 
-echo "run :PluginInstall"
-
-cd /opt/
-if ! [ -d "gtran" ]; then
-    git clone https://github.com/skanehira/gtran.git
-    cd gtran
-else
-    cd gtran
-    update_git
-fi
-if ! GOBIN=/usr/bin/ go install;then echo "Bauen fehlgeschlagen!!!";fi
-cd /
-
 cp -v /opt/${repo}/scripts/import-gsettings /usr/bin/import-gsettings
 
 # clipboard wrapper
