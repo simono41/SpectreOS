@@ -617,6 +617,7 @@ aurinstaller polymc-bin
 aurinstaller beautysh
 #aurinstaller jetbrains-toolbox
 aurinstaller wdisplays
+#aurinstaller kickoff
 
 # MS-Fonts
 mkdir -p /etc/fonts/conf.avail/
