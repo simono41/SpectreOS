@@ -38,6 +38,7 @@ networkmanager
 networkmanager-openvpn
 networkmanager-qt
 nm-connection-editor
+wpa_supplicant
 noto-fonts
 noto-fonts-emoji
 noto-fonts-extra
