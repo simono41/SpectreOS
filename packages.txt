@@ -1,6 +1,8 @@
 dhcpcd nano vim intel-ucode amd-ucode iwd lvm2 btrfs-progs arch-install-scripts
 squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie
 acpid dbus avahi ntp fail2ban
+pulseaudio pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-alsa pavucontrol
+blueman bluez-tools
 keychain
 cups hplip
 alacritty
