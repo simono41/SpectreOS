@@ -16,6 +16,7 @@ git config --global credential.helper store
 repo=deadc0de-remix-os
 repo1=shell-scripte-code
 arch=$(uname -m)
+branch=master
 
 # Aktualisiere die Repositiories
 /opt/${repo}/repo.sh
@@ -23,13 +24,13 @@ arch=$(uname -m)
 if [ -d "/opt/${repo}" ]; then
         echo "${repo} existiert bereits!!!"
         cd /opt/${repo}
-        git checkout ${arch}
+        git checkout ${branch}
         if ! git remote set-url origin ${WEBADDRESS_OS}; then
            git remote add origin ${WEBADDRESS_OS}
         fi
         git pull
     else
-        git clone -b ${arch} ${WEBADDRESS_OS} /opt/${repo}
+        git clone -b ${branch} ${WEBADDRESS_OS} /opt/${repo}
     fi
     if [ -d "/opt/${repo1}" ]; then
         echo "${repo1} existiert bereits!!!"
