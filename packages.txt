@@ -1,7 +1,7 @@
 dhcpcd nano vim intel-ucode amd-ucode iwd lvm2 btrfs-progs arch-install-scripts
-squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie
+squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie memtest86+
 acpid dbus avahi ntp fail2ban
-pulseaudio pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-alsa pavucontrol
+pulseaudio pulseaudio-bluetooth pulseaudio-equalizer pulseaudio-alsa pavucontrol pamixer
 blueman bluez-tools
 keychain
 starship
@@ -22,6 +22,8 @@ filezilla
 firefox-dark-reader
 firefox-i18n-de
 firefox-ublock-origin
+thunderbird
+thunderbird-i18n-de
 gimp
 git
 gnupg
@@ -40,7 +42,7 @@ noto-fonts
 noto-fonts-emoji
 noto-fonts-extra
 opus-tools vorbis-tools flac ffmpeg
-pixz
+pixz pigz zstd xz
 pkg-config gcc
 polkit
 python
@@ -49,6 +51,8 @@ sway i3-gaps i3status-rust
 swaybg
 swayidle
 swaylock
+gammastep
+wl-clipboard
 syncthing
 vlc
 wine
