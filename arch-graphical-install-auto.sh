@@ -413,11 +413,8 @@ chmod 755 /usr/bin/update-script
 
 # Verzeichnisse
 mkdir -p /home/${user}/Dokumente
-mkdir -p /home/${user}/Documents
 mkdir -p /home/${user}/Bilder
-mkdir -p /home/${user}/Pictures
 mkdir -p /home/${user}/Musik
-mkdir -p /home/${user}/Music
 mkdir -p /home/${user}/Downloads
 mkdir -p /home/${user}/Videos
 mkdir -p /home/${user}/Desktop
@@ -656,6 +653,8 @@ if [ "${archisoinstall}" == "y" ]; then
     links
 fi
 
+su testbenutzer -c "chezmoi init --apply https://git.spectreos.de/simono41/dotfiles.git"
+su testbenutzer -c "chezmoi update -v"
 userrechte
 
 # https://aur.archlinux.org/packages/ttf-font-nerd-dummy

@@ -1,6 +1,7 @@
 dhcpcd nano vim intel-ucode amd-ucode iwd lvm2 btrfs-progs arch-install-scripts
 squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie
 acpid dbus avahi
+keychain
 cups hplip
 alacritty
 ark

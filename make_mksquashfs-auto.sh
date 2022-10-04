@@ -218,7 +218,7 @@ function UEFI() {
         sed -e 's|def_keyboard=.*$|def_keyboard=\"de\"|' -i ${work_dir}/iso/boot/grub/defaults.cfg
         sed -e 's|def_timezone=.*$|def_timezone=\"Europe/Berlin\"|' -i ${work_dir}/iso/boot/grub/defaults.cfg
         sed -e 's|def_netinstall=.*$|def_netinstall=\"no\"|' -i ${work_dir}/iso/boot/grub/defaults.cfg
-        sed -e 's|def_autostartdesktop=.*$|def_autostartdesktop=\"i3\"|' -i ${work_dir}/iso/boot/grub/defaults.cfg
+        sed -e 's|def_autostartdesktop=.*$|def_autostartdesktop=\"sway\"|' -i ${work_dir}/iso/boot/grub/defaults.cfg
         sed -e 's|def_copytoram=.*$|def_copytoram=\"n\"|' -i ${work_dir}/iso/boot/grub/defaults.cfg
         
         ###
