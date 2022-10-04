@@ -116,3 +116,6 @@ xorg-server xorg-xinit xorg-drivers
 xournalpp libreoffice libreoffice-fresh-de
 libwacom xf86-input-wacom
 yt-dlp
+python-pyxdg
+archlinux-xdg-menu
+python-jeepney
