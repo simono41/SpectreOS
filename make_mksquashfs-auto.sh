@@ -66,7 +66,7 @@ function mount_chroot() {
 
 function system() {
 
-    pacman -Sy arch-install-scripts squashfs-tools dosfstools libisoburn --needed
+    pacman -Sy arch-install-scripts squashfs-tools dosfstools libisoburn --needed --noconfirm
     
     if [ "${makesystem}" == "y" ]; then
         mkdir -p ${work_dir}/${arch}/airootfs

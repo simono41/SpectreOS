@@ -593,10 +593,6 @@ if ! [ -f "/etc/X11/xorg.conf.d/40-libinput.conf" ]; then
     ln -s /usr/share/X11/xorg.conf.d/40-libinput.conf /etc/X11/xorg.conf.d/40-libinput.conf
 fi
 
-if [ "${archisoinstall}" == "y" ]; then
-    links
-fi
-
 su ${user} -c "chezmoi init --apply https://git.spectreos.de/simono41/dotfiles.git"
 su ${user} -c "chezmoi update -v"
 
@@ -671,6 +667,8 @@ if [ "${archisoinstall}" == "y" ]; then
     echo "[Service]" > ${mountpoint}/etc/systemd/system/getty\@tty1.service.d/autologin.conf
     echo "ExecStart=" >> ${mountpoint}/etc/systemd/system/getty\@tty1.service.d/autologin.conf
     echo "ExecStart=-/usr/bin/agetty --autologin ${user} -s %I 115200,38400,9600 vt102" >> ${mountpoint}/etc/systemd/system/getty\@tty1.service.d/autologin.conf
+
+    links
 
     pacman -Qq > /pkglist.txt
     if [ $(ls /var/cache/pacman/pkg | wc -w) -gt 0 ]; then
