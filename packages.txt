@@ -40,6 +40,7 @@ cups
 polkit-gnome
 wl-clipboard
 pavucontrol
+qt6-wayland
 emacs
 adapta-gtk-theme
 lib32-at-spi2-core
