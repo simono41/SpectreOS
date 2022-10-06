@@ -618,6 +618,9 @@ aurinstaller beautysh
 #aurinstaller jetbrains-toolbox
 aurinstaller wdisplays
 #aurinstaller kickoff
+aurinstaller sov
+aurinstaller wob
+aurinstaller wlogout
 
 # MS-Fonts
 mkdir -p /etc/fonts/conf.avail/

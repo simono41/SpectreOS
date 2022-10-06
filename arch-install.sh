@@ -9,7 +9,7 @@ arch=$(uname -m)
 repo=spectreos
 repo1=shell-scripte-code
 cache=/var/cache/pacman/pkg/
-repo_url="https://git.spectreos.de/simono41/SpectreOS/raw/x86_64/repo.sh"
+repo_url="https://git.spectreos.de/simono41/SpectreOS/raw/master/repo.sh"
 
 if cat /etc/passwd | grep "x:1000" > /dev/null; then
     tempuser=$(cat /etc/passwd | grep "x:1000" | awk '{print $1}')
@@ -1202,7 +1202,7 @@ function abfrage() {
             echo "You can choose with an online installation, which distrubtion you want to install!!!"
 
         fi
-        hostname=deadc0de-remix-os
+        hostname=spectreos
 
         echo "WARNING!!! Diese Methode ist wegen einer neuen UDEV Rule unnötig geworden der alle angeschlossen Laufwerke automatisch mountet ;-)"
         read -p "Should you an disk added to your fstab? : [y/udevautomountrule/N] " autodisk
