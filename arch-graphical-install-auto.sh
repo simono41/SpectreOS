@@ -667,6 +667,11 @@ mkinitcpio -P -c /etc/mkinitcpio.conf
 echo "Erstelle Packetverzeichnis!!!"
 
 if [ "${archisoinstall}" == "y" ]; then
+    mkdir -p ${mountpoint}/etc/systemd/system/getty\@tty1.service.d/
+    echo "[Service]" > ${mountpoint}/etc/systemd/system/getty\@tty1.service.d/autologin.conf
+    echo "ExecStart=" >> ${mountpoint}/etc/systemd/system/getty\@tty1.service.d/autologin.conf
+    echo "ExecStart=-/usr/bin/agetty --autologin ${user} -s %I 115200,38400,9600 vt102" >> ${mountpoint}/etc/systemd/system/getty\@tty1.service.d/autologin.conf
+
     pacman -Qq > /pkglist.txt
     if [ $(ls /var/cache/pacman/pkg | wc -w) -gt 0 ]; then
         rm -R /var/cache/pacman/pkg/*
