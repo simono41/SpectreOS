@@ -10,6 +10,12 @@
 ### ROM in einer VM-Testen
     qemu-system-x86_64 --enable-kvm --cdrom out/arch-deadc0de_remix_os-20211212-x86_64.iso -boot d -m 8G
 
+### ROM zum starten von Wayland mit VNC
+    sudo qemu-system-x86_64 --cdrom arch-spectreos-20221007-x86_64.iso -boot d -m 8G -vnc :1 --enable-kvm -vga qxl
+
+### Zum starten mit Wine in Wayland von World of Warcraft
+    DISPLAY=:0 wine Wow.exe -opengl
+
 ### Zum anzeigen der Größe der installierten Packeten
     LC_ALL=C pacman -Qi | egrep '^(Name|Installed)' | cut -f2 -d':' | tr '\nK' ' \n' | sort -nrk 3 | less
 
