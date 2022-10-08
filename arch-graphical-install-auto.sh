@@ -317,6 +317,10 @@ chmod 755 /usr/bin/compress
 cp /opt/${repo}/scripts/compress-pigz.sh /usr/bin/compress-pigz
 chmod 755 /usr/bin/compress-pigz
 
+# pinentray wayland
+cp /opt/${repo}/scripts/pinentry-wayland /usr/bin/pinentry-wayland
+chmod 755 /usr/bin/pinentry-wayland
+
 # set system startup files
 echo "System startup files"
 cp -v /opt/${repo}/service/* /etc/systemd/system/
