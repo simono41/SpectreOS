@@ -120,7 +120,7 @@ gparted
 grim
 htop
 jre-openjdk
-lxde-gtk3 xfce4 mousepad
+lxde-gtk3 xfce4 xfce4-goodies imv mousepad
 network-manager-applet
 networkmanager
 networkmanager-openvpn
