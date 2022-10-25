@@ -1577,13 +1577,6 @@ read -s -p "Please choose a passwort for root!!! " rootpass
 echo "root:${rootpass}" > root-keys.txt
 arch-chroot ${mountpoint} chpasswd < root-keys.txt
 
-# config.fish
-mkdir -p ${mountpoint}/root/.config/fish/
-cp /opt/${repo}/configs/config.fish ${mountpoint}/root/.config/fish/config.fish
-
-touch ${mountpoint}/root/.bash_profile
-touch ${mountpoint}/home/"${user}"/.bash_profile
-
 if [ ${autologin} != "n" ]; then
     mkdir -p ${mountpoint}/etc/systemd/system/getty\@tty1.service.d/
     echo "[Service]" > ${mountpoint}/etc/systemd/system/getty\@tty1.service.d/autologin.conf
