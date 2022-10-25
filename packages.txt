@@ -1,7 +1,7 @@
 dhcpcd nano vim vim-spell-de intel-ucode amd-ucode iwd lvm2 btrfs-progs arch-install-scripts
 squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie memtest86+
 acpid dbus avahi ntp fail2ban alsa-utils alsa-tools bash-completion
-pavucontrol pamixer
+pavucontrol pamixer wget
 mesa-utils egl-wayland wofi mako fuzzel bemenu-wayland wayvnc xdg-desktop-portal-wlr slurp grim
 at-spi2-core
 python-atspi
