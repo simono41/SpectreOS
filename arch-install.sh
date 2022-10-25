@@ -1617,6 +1617,11 @@ if [ "${multicard}" == "y" ]; then
     echo "DRI_PRIME=1" >> ${mountpoint}/etc/environment
 fi
 
+# Kopiere Netzwerkonfigurationen wie WLAN-Passwörter (falls vorhanden)
+if [ -f "/etc/NetworkManager/system-connections/*" ]; then
+    cp -v /etc/NetworkManager/system-connections/* ${mountpoint}/etc/NetworkManager/system-connections/
+fi
+
 touch ${mountpoint}/etc/grub-snapshot
 arch-chroot ${mountpoint} grub-mkconfig -o /boot/grub/grub.cfg
 
