@@ -176,6 +176,7 @@ function userrechte() {
     #gnupg
     mkdir -p /home/"$user"/.gnupg
     chmod -R 700 /home/"$user"/.gnupg
+    chown -cRv "$user":users /home/${user}/.gnupg
     if [ -f /home/${user}/.gnupg/* ]; then
         chmod -v 600 /home/${user}/.gnupg/*
     fi
