@@ -3,6 +3,7 @@ squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie 
 acpid dbus avahi ntp fail2ban alsa-utils alsa-tools bash-completion
 pavucontrol pamixer wget
 mesa-utils egl-wayland wofi mako fuzzel bemenu-wayland wayvnc xdg-desktop-portal-wlr slurp grim
+remmina libvncserver spice-gtk freerdp gtk-vnc
 at-spi2-core
 python-atspi
 terminus-font 
