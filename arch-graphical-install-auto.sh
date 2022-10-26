@@ -614,14 +614,29 @@ fi
 #aurinstaller ntfysh-bin
 #aurinstaller spotify
 #aurinstaller https://github.com/MultiMC/multimc-pkgbuild
-aurinstaller polymc-bin
-aurinstaller beautysh
 #aurinstaller jetbrains-toolbox
-aurinstaller wdisplays
 #aurinstaller kickoff
+
+# Minecraft-launcher
+aurinstaller polymc-bin
+
+# bash beautifier
+aurinstaller beautysh
+
+# arandr for wayland
+aurinstaller wdisplays
+
+# audio bar
 aurinstaller sov
+
+# brightness bar
 aurinstaller wob
+
+# logout screen
 aurinstaller wlogout
+
+# on-screen keyboard (start with wvkbd-mobintl)
+aurinstaller wvkbd
 
 # MS-Fonts
 mkdir -p /etc/fonts/conf.avail/
