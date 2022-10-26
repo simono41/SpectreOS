@@ -40,6 +40,7 @@ cups
 polkit-gnome
 wl-clipboard
 pavucontrol
+qt5-wayland
 qt6-wayland
 emacs
 adapta-gtk-theme
@@ -120,7 +121,7 @@ gparted
 grim
 htop
 jre-openjdk
-lxde-gtk3 xfce4 xfce4-goodies imv mousepad
+lxde-gtk3 qt5ct lxqt xfce4 xfce4-goodies imv mousepad
 network-manager-applet
 networkmanager
 networkmanager-openvpn
