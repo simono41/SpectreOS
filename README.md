@@ -19,6 +19,9 @@
 ### Zum anzeigen der Größe der installierten Packeten
     LC_ALL=C pacman -Qi | egrep '^(Name|Installed)' | cut -f2 -d':' | tr '\nK' ' \n' | sort -nrk 3 | less
 
+### Zum starten einer Sitzung mit Mosh
+    LC_ALL="en_US.UTF-8" mosh --ssh="ssh -p PORT" user@server
+
 ### Set DPI in Nvidia xorg.conf in Device or Screen
     xrandr --dpi 96
 
