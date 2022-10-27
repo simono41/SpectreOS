@@ -51,7 +51,11 @@ function minimalinstallation() {
     cp -v /opt/${repo}/mirrorlist* ${mountpoint}/etc/pacman.d/
     chmod 644 -R ${mountpoint}etc/pacman.d/mirrorlist*
 
-    arch-chroot ${mountpoint} /usr/bin/arch-graphical-install-auto
+    cp /opt/${repo}/scripts/update.sh ${mountpoint}/usr/bin/update-script
+    chmod +x ${mountpoint}/usr/bin/update-script
+    if ! arch-chroot ${mountpoint} /usr/bin/update-script; then
+        echo "Aktualisierung nicht erfolgreich!!!"
+    fi
 }
 
 function gitclone() {
