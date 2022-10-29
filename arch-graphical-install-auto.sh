@@ -381,7 +381,7 @@ cp /opt/${repo}/arch-install.sh /usr/bin/arch-install
 chmod 755 /usr/bin/arch-install
 
 if ! grep 'TERMINAL' /etc/environment; then
-    echo "TERMINAL=alacritty" >> /etc/environment
+    echo "TERMINAL=wezterm" >> /etc/environment
 fi
 
 if ! grep 'EDITOR' /etc/environment; then

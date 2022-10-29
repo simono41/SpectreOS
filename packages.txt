@@ -97,7 +97,7 @@ gstreamer
 keychain
 starship
 cups hplip
-alacritty
+wezterm
 arc-gtk-theme
 arc-icon-theme
 arc-solid-gtk-theme
