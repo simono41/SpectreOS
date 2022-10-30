@@ -97,7 +97,7 @@ gstreamer
 keychain
 starship
 cups hplip
-wezterm
+alacritty wezterm
 arc-gtk-theme
 arc-icon-theme
 arc-solid-gtk-theme
@@ -123,7 +123,7 @@ gparted
 grim
 htop
 jre-openjdk
-lxde-gtk3 qt5ct lxqt xfce4 xfce4-goodies imv mousepad
+qt5ct lxqt imv
 network-manager-applet
 networkmanager
 networkmanager-openvpn
