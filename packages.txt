@@ -123,7 +123,7 @@ gparted
 grim
 htop
 jre-openjdk
-qt5ct lxqt imv
+qt5ct lxqt imv evince
 network-manager-applet
 networkmanager
 networkmanager-openvpn
