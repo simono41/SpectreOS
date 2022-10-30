@@ -115,8 +115,7 @@ filezilla
 firefox-dark-reader
 firefox-i18n-de
 firefox-ublock-origin
-thunderbird
-thunderbird-i18n-de
+thunderbird thunderbird-i18n-de thunderbird-dark-reader
 gimp
 git
 gnupg
