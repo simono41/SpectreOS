@@ -163,3 +163,4 @@ yt-dlp
 python-pyxdg
 archlinux-xdg-menu
 python-jeepney
+docker docker-compose
