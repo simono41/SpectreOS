@@ -13,4 +13,4 @@ Description=Update Grub Scriptes (snapshots)
 Depends=mkinitcpio
 When=PostTransaction
 NeedsTargets
-Exec=/bin/sh -c 'cp /opt/deadc0de-remix-os/configs/grub.d/10_linux /etc/grub.d/10_linux; grub-mkconfig -o /boot/grub/grub.cfg; /usr/bin/mkinitcpio -P'
+Exec=/bin/sh -c 'cp /opt/spectreos/configs/grub.d/10_linux /etc/grub.d/10_linux; grub-mkconfig -o /boot/grub/grub.cfg; /usr/bin/mkinitcpio -P'
