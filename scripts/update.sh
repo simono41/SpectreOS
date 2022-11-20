@@ -13,7 +13,7 @@ echo "Als root Angemeldet"
 version="${1}"
 
 git config --global credential.helper store
-repo=deadc0de-remix-os
+repo=spectreos
 repo1=shell-scripte-code
 arch=$(uname -m)
 branch=master
