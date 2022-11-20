@@ -6,6 +6,7 @@ pavucontrol pamixer wget
 mesa-utils egl-wayland wofi mako fuzzel bemenu-wayland wayvnc xdg-desktop-portal-wlr slurp grim
 remmina libvncserver spice-gtk freerdp gtk-vnc
 mosh
+libheif
 at-spi2-core
 python-atspi
 terminus-font 
