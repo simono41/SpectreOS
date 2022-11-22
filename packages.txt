@@ -5,7 +5,7 @@ acpid dbus avahi ntp fail2ban alsa-utils alsa-tools bash-completion
 pavucontrol pamixer wget
 mesa-utils egl-wayland wofi mako fuzzel bemenu-wayland wayvnc xdg-desktop-portal-wlr slurp grim
 remmina libvncserver spice-gtk freerdp gtk-vnc
-mosh
+mosh mitmproxy
 libheif
 at-spi2-core
 python-atspi
