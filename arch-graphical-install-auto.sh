@@ -598,6 +598,10 @@ if ! [ -f "/etc/X11/xorg.conf.d/40-libinput.conf" ]; then
     ln -s /usr/share/X11/xorg.conf.d/40-libinput.conf /etc/X11/xorg.conf.d/40-libinput.conf
 fi
 
+if ! [ -f "/usr/bin/l" ]; then
+    ln -s /usr/bin/ls /usr/bin/l
+fi
+
 su ${user} -c "chezmoi init --apply https://git.spectreos.de/simono41/dotfiles.git"
 su ${user} -c "chezmoi update -v"
 
