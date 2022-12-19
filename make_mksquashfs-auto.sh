@@ -71,7 +71,7 @@ function system() {
     if [ "${makesystem}" == "y" ]; then
         mkdir -p ${work_dir}/${arch}/airootfs
         cp -v mirrorlist* /etc/pacman.d/
-        pacstrap -c -d -G -C pacman.conf -M ${work_dir}/${arch}/airootfs $(cat packages.txt)
+        pacstrap -c -G -C pacman.conf -M ${work_dir}/${arch}/airootfs $(cat packages.txt)
     fi
     
     if [ "${mkinitcpio}" == "y" ]; then
