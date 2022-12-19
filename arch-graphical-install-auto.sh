@@ -602,7 +602,7 @@ if ! [ -f "/usr/bin/l" ]; then
     ln -s /usr/bin/ls /usr/bin/l
 fi
 
-su ${user} -c "chezmoi init --apply https://git.spectreos.de/simono41/dotfiles.git"
+su ${user} -c "chezmoi init --apply https://git.brothertec.eu/simono41/dotfiles.git"
 su ${user} -c "chezmoi update -v"
 
 # https://aur.archlinux.org/packages/ttf-font-nerd-dummy
