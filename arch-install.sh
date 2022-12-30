@@ -6,7 +6,7 @@ clear
 
 git config --global credential.helper store
 arch=$(uname -m)
-repo=spectreos
+repo=SpectreOS
 repo1=shell-scripte-code
 cache=/var/cache/pacman/pkg/
 repo_url="https://git.spectreos.de/simono41/SpectreOS/raw/master/repo.sh"
