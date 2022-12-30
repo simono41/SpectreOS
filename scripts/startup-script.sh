@@ -3,7 +3,7 @@
 set -x
 
 cmdlineparameter=$(cat /proc/cmdline)
-repo=spectreos
+repo=SpectreOS
 user=user1
 
 if cat /etc/passwd | grep "x:1000" > /dev/null; then
