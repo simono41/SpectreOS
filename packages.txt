@@ -3,7 +3,7 @@ btrfs-progs ntfs-3g exfatprogs
 arch-install-scripts squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie memtest86+
 acpid dbus avahi ntp fail2ban alsa-utils alsa-tools bash-completion
 pavucontrol pamixer wget
-mesa-utils egl-wayland wofi mako fuzzel bemenu-wayland wayvnc xdg-desktop-portal-wlr slurp grim
+mesa-utils egl-wayland wofi mako fuzzel bemenu-wayland wayvnc xdg-desktop-portal-wlr slurp grim jq
 remmina libvncserver spice-gtk freerdp gtk-vnc
 mosh mitmproxy
 libheif
