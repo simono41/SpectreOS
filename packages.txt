@@ -7,6 +7,7 @@ pavucontrol pamixer wget
 mesa-utils egl-wayland wofi mako fuzzel bemenu-wayland wayvnc xdg-desktop-portal-wlr slurp grim jq
 remmina libvncserver spice-gtk freerdp gtk-vnc element-desktop trash-cli
 mosh mitmproxy
+libva-intel-driver intel-media-driver org.freedesktop.secrets gnome-keyring
 libheif
 at-spi2-core
 python-atspi
