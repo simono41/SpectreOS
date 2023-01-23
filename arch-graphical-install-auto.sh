@@ -119,7 +119,7 @@ function addusers() {
         useruid=$((${useruid} + 1))
     done
 
-    useradd -m -g users -G wheel,audio,input,power,storage,video,sys,optical,adm,lp,scanner,sddm,kvm,fuse,autologin,network,wireshark,docker,libvirt,libvirtdbus -s /bin/bash --uid ${useruid} ${user}
+    useradd -m -g users -G wheel,audio,input,power,storage,video,sys,optical,adm,lp,scanner,sddm,kvm,fuse,autologin,network,wireshark,docker,libvirt,libvirtdbus -s /usr/bin/zsh --uid ${useruid} ${user}
     echo "${user}:${userpass}" | chpasswd
     mkdir -p /home/${user}/
     userrechte
@@ -432,8 +432,8 @@ cp /opt/${repo}/scripts/addusers.sh /usr/bin/addusers
 chmod 755 /usr/bin/addusers
 
 # set default shell
-chsh -s /bin/bash root
-chsh -s /bin/bash ${user}
+chsh -s /usr/bin/zsh root
+chsh -s /usr/bin/zsh ${user}
 
 # aurinstaller
 cp /opt/${repo}/scripts/aurinstall.sh /usr/bin/aurinstaller

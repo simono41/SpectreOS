@@ -1570,6 +1570,7 @@ fi
 arch-chroot ${mountpoint} usermod -l "${user}" "user1"
 arch-chroot ${mountpoint} usermod -d /home/"${user}" -m "${user}"
 arch-chroot ${mountpoint} chfn -f "${name}" "${user}"
+arch-chroot ${mountpoint} chsh -s /usr/bin/zsh ${user}
 
 if ! [ "${fastinstall}" == "y" ]; then
     read -s -p "Please choose a passwort for you!!! " userpass
