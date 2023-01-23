@@ -142,7 +142,7 @@ polkit
 python
 qemu-system-x86
 qemu-hw-display-qxl
-sway i3-gaps i3status-rust
+sway i3-wm i3status-rust
 swaybg
 swayidle
 swaylock
