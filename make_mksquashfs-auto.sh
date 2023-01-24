@@ -19,7 +19,7 @@ fi
 # xorriso
 # squashfs-tools
 
-iso_name=SpectreOS
+iso_name=spectreos
 iso_label="SPECTREOS"
 iso_label_short="S_OS"
 iso_version=$(date +%Y%m%d)
@@ -37,8 +37,6 @@ done
 arch=$(uname -m)
 repo=spectreos
 repo1=shell-scripte-code
-
-isohostname="${iso_name}"
 
 work_dir="/builds"
 
