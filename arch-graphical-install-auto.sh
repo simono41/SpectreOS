@@ -661,7 +661,7 @@ gsettings set org.gnome.desktop.wm.preferences theme "Arc-Darker"
 
 gtk-update-icon-cache
 
-userrechte
+#userrechte
 
 # grub-updater
 if [ -d /etc/grub.d ]; then
