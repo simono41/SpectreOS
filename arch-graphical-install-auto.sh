@@ -490,16 +490,6 @@ chmod +x /usr/bin/hardreset.sh
 cp /opt/${repo}/scripts/slowtype /usr/bin/slowtype
 chmod +x /usr/bin/slowtype
 
-cp /opt/${repo}/configs/vimrc /etc/vimrc
-
-if ! [ -d "/home/${user}/.vim/bundle/Vundle.vim" ]; then
-    git clone https://github.com/VundleVim/Vundle.vim.git /home/${user}/.vim/bundle/Vundle.vim
-else
-    cd /home/${user}/.vim/bundle/Vundle.vim
-    update_git
-fi
-cd /
-
 cp -v /opt/${repo}/scripts/import-gsettings /usr/bin/import-gsettings
 
 # clipboard wrapper
