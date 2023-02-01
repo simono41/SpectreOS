@@ -37,3 +37,6 @@
     gsettings set org.gnome.desktop.interface gtk-theme Arc-Darker
     gsettings set org.gnome.desktop.interface icon-theme Arc
     gsettings set org.gnome.desktop.wm.preferences theme "Arc-Darker"
+
+### Liste zur README.bootparams
+    https://gitlab.archlinux.org/archlinux/mkinitcpio/mkinitcpio-archiso/-/blob/master/docs/README.bootparams

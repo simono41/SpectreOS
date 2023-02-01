@@ -9,6 +9,7 @@ remmina libvncserver spice-gtk freerdp gtk-vnc element-desktop trash-cli
 mosh mitmproxy
 libva-intel-driver intel-media-driver org.freedesktop.secrets gnome-keyring
 libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau libvdpau-va-gl
+openscad prusa-slicer slicer-udev
 libheif
 at-spi2-core
 python-atspi
