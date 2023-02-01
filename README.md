@@ -40,3 +40,9 @@
 
 ### Liste zur README.bootparams
     https://gitlab.archlinux.org/archlinux/mkinitcpio/mkinitcpio-archiso/-/blob/master/docs/README.bootparams
+
+### Hier zu einem ähnlichem Script zu make_mksquashfs-auto.sh
+    https://gitlab.archlinux.org/archlinux/archiso/-/blob/master/archiso/mkarchiso
+
+### Hier ein Script zum vollautomatisiertem starten mit QEMU
+    https://gitlab.archlinux.org/archlinux/archiso/-/blob/master/scripts/run_archiso.sh
