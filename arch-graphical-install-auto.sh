@@ -155,7 +155,7 @@ function add_plymouth() {
 function userrechte() {
     #user
     chown -cR "$user":users /home/"$user"
-    chmod 750 -R /home/"$user"
+    #chmod 750 -R /home/"$user"
     #ssh
     if ! [ -d /home/"$user"/.ssh ]; then
         mkdir -p /home/"$user"/.ssh
@@ -632,6 +632,12 @@ aurinstaller wlogout
 # on-screen keyboard (start with wvkbd-mobintl)
 aurinstaller wvkbd
 
+# thinkpad docking station Ultra
+aurinstaller evdi
+aurinstaller displaylink
+# Systemd Service (zum testen)
+systemctl enable displaylink
+
 # MS-Fonts
 mkdir -p /etc/fonts/conf.avail/
 cp /opt/${repo}/configs/20-no-embedded.conf /etc/fonts/conf.avail/
@@ -651,7 +657,7 @@ gsettings set org.gnome.desktop.wm.preferences theme "Arc-Darker"
 
 gtk-update-icon-cache
 
-#userrechte
+userrechte
 
 # grub-updater
 if [ -d /etc/grub.d ]; then
