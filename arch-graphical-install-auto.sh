@@ -633,10 +633,10 @@ aurinstaller wlogout
 aurinstaller wvkbd
 
 # thinkpad docking station Ultra
-aurinstaller evdi
-aurinstaller displaylink
+#aurinstaller evdi-git
+#aurinstaller displaylink
 # Systemd Service (zum testen)
-systemctl enable displaylink
+#systemctl enable displaylink
 
 # MS-Fonts
 mkdir -p /etc/fonts/conf.avail/
