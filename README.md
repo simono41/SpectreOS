@@ -10,8 +10,11 @@
 ### ROM in einer VM-Testen
     qemu-system-x86_64 --enable-kvm --cdrom out/arch-deadc0de_remix_os-20211212-x86_64.iso -boot d -m 8G
 
-### ROM zum starten von Wayland mit VNC
-    sudo qemu-system-x86_64 --cdrom arch-spectreos-20221007-x86_64.iso -boot d -m 8G -vnc :1 --enable-kvm -vga qxl
+### Erzeugen einen Images mit dynamischer größe
+    qemu-img create -f qcow2 ~/SpectreOS.img 200G
+
+### ROM zum starten von Wayland mit VNC und Image mit Passwort Authentifizierung
+    printf "change vnc password\n%s\n" password | sudo qemu-system-x86_64 --cdrom out/arch-spectreos-* -boot d -m 8G -vnc :1,password -monitor stdio --enable-kvm -vga qxl -k de -hda ~/SpectreOS.img 
 
 ### Zum starten mit Wine in Wayland von World of Warcraft
     DISPLAY=:0 wine Wow.exe -opengl
