@@ -49,7 +49,7 @@ function minimalinstallation() {
     cp -v /opt/${repo}/configs/pacman-hooks/* ${mountpoint}/etc/pacman.d/hooks/
     cp -v /opt/${repo}/pacman.conf ${mountpoint}/etc/pacman.conf
     cp -v /opt/${repo}/mirrorlist* ${mountpoint}/etc/pacman.d/
-    chmod 644 -R ${mountpoint}etc/pacman.d/mirrorlist*
+    chmod 644 -R ${mountpoint}/etc/pacman.d/mirrorlist*
 
     cp /opt/${repo}/scripts/update.sh ${mountpoint}/usr/bin/update-script
     chmod +x ${mountpoint}/usr/bin/update-script
