@@ -10,6 +10,7 @@ mosh mitmproxy
 libva-intel-driver intel-media-driver org.freedesktop.secrets gnome-keyring
 libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau libvdpau-va-gl
 openscad prusa-slicer slicer-udev
+man man-pages man-pages-de
 libheif
 at-spi2-core
 python-atspi

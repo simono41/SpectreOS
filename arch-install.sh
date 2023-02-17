@@ -38,7 +38,7 @@ echo "Logged in as root"
 
 function minimalinstallation() {
     cp -v /opt/${repo}/mirrorlist* /etc/pacman.d/
-    pacstrap -c -d -G -C /opt/${repo}/pacman.conf -M ${mountpoint} $(cat /opt/${repo}/packages.txt)
+    pacstrap -G -C /opt/${repo}/pacman.conf -M ${mountpoint} $(cat /opt/${repo}/packages.txt)
 
     # hooks
     cp -v /opt/${repo}/configs/install/* ${mountpoint}/usr/lib/initcpio/install/
@@ -53,6 +53,9 @@ function minimalinstallation() {
 
     cp /opt/${repo}/scripts/update.sh ${mountpoint}/usr/bin/update-script
     chmod +x ${mountpoint}/usr/bin/update-script
+    cp /opt/${repo}/repo.sh ${mountpoint}/usr/bin/repo-script
+    chmod +x ${mountpoint}/usr/bin/repo-script
+
     if ! arch-chroot ${mountpoint} /usr/bin/update-script; then
         echo "Aktualisierung nicht erfolgreich!!!"
     fi

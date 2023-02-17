@@ -19,7 +19,12 @@ arch=$(uname -m)
 branch=master
 
 # Aktualisiere die Repositiories
-/opt/${repo}/repo.sh
+if [ -f "/opt/${repo}/repo.sh" ]; then
+  /opt/${repo}/repo.sh
+else
+  /usr/bin/repo-script
+fi
+source /etc/environment
 
 if [ -d "/opt/${repo}" ]; then
         echo "${repo} existiert bereits!!!"
