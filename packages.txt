@@ -18,6 +18,7 @@ terminus-font
 sudo
 zsh
 zsh-autosuggestions
+zsh-syntax-highlighting fzf tmux fish pkgfile
 iwd
 bluez
 bluez-utils
@@ -78,6 +79,7 @@ ttf-fira-sans
 ttf-font-awesome
 ttf-hack
 ttf-hack-nerd
+ttf-meslo-nerd
 ttf-jetbrains-mono
 ttf-liberation
 ttf-nerd-fonts-symbols-2048-em
