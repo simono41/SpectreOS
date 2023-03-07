@@ -1442,7 +1442,7 @@ elif [ "${phaseone}" != "n" ] && [ "${fastinstallnext}" != "y" ]; then
                 if [ "${updatepackages}" == "y" ]; then
                     echo "Please dont update the linux kernel!!!"
                     if [ -f  /opt/${repo}/packages.txt ]; then
-                        pacman -Sy $(cat /opt/${repo}/packages.txt) --noconfirm --needed --ignore linux
+                        pacman -Syu $(cat /opt/${repo}/packages.txt) --noconfirm --needed --ignore linux
                     else
                         echo "Kann keine neuen Packete nachinstallieren weil die base.txt nicht gefunden werden kann!!"
                         echo "Es kann sein das dass Programm nicht korrekt funktioniert!!!"

@@ -48,7 +48,7 @@ function pacmanconf() {
     pacman-key --init
     pacman-key --populate archlinux
 
-    pacman -Sy git glibc --needed --noconfirm
+    pacman -Syu git glibc --needed --noconfirm
 
 }
 
