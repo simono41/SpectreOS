@@ -634,8 +634,10 @@ aurinstaller wvkbd
 
 # background temparature
 aurinstaller wl-gammarelay-rs
-echo "Entferne wl-gammerelay-rs Ordner um Speicherplatz zu sparen"
-rm -R /home/${user}/aur-builds/wl-gammarelay-rs
+if [ "${archisoinstall}" == "y" ]; then
+    echo "Entferne wl-gammerelay-rs Ordner um Speicherplatz zu sparen"
+    rm -R /home/${user}/aur-builds/wl-gammarelay-rs
+fi
 
 # thinkpad docking station Ultra
 #aurinstaller evdi-git
