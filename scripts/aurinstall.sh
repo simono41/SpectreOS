@@ -32,7 +32,8 @@ function aurinstaller() {
 if [ -d ${packagename} ];then
     echo "Bereits vorhanden!!!"
     cd ${packagename}
-    git reset --hard
+    #git reset --hard
+    git clean -fdx
     git pull
 else
     aurinstaller
