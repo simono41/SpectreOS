@@ -673,7 +673,7 @@ fi
 mkdir -p /boot/grub/
 grub-mkconfig -o /boot/grub/grub.cfg
 
-aurupdater
+#aurupdater
 add_locale_settings
 
 if pacman -Qdtq; then
