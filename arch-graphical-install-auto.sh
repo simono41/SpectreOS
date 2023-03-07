@@ -632,6 +632,9 @@ aurinstaller wlogout
 # on-screen keyboard (start with wvkbd-mobintl)
 aurinstaller wvkbd
 
+# background temparature
+aurinstaller wl-gammarelay-rs
+
 # thinkpad docking station Ultra
 #aurinstaller evdi-git
 #aurinstaller displaylink
