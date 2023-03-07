@@ -33,6 +33,7 @@ if [ -d ${packagename} ];then
     echo "Bereits vorhanden!!!"
     cd ${packagename}
     git reset --hard
+    git pull
 else
     aurinstaller
 fi
