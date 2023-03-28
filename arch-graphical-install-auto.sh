@@ -490,8 +490,6 @@ chmod +x /usr/bin/hardreset.sh
 cp /opt/${repo}/scripts/slowtype /usr/bin/slowtype
 chmod +x /usr/bin/slowtype
 
-cp -v /opt/${repo}/scripts/import-gsettings /usr/bin/import-gsettings
-
 # clipboard wrapper
 cp -v /opt/${repo}/scripts/clipboard_wrapper/* /usr/bin/
 
