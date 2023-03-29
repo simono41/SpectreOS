@@ -104,8 +104,8 @@ function standartinstallation() {
 
 function addusers() {
     # Erstelle Gruppen
-    groupid=2000
-    for wort in wheel audio input power storage video sys optical adm lp scanner sddm kvm fuse autologin network wireshark docker libvirt libvirtdbus; do
+    groupid=1000
+    for wort in users wheel audio input power storage video sys optical adm lp scanner sddm kvm fuse autologin network wireshark docker libvirt libvirtdbus; do
         if ! cat /etc/group | grep ${wort}; then
             while cat /etc/group | grep ${groupid}; do
                 groupid=$((${groupid} + 1))
