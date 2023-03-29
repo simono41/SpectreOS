@@ -774,6 +774,11 @@ function grubinstall() {
         parameter="${parameter}cryptkey=UUID=${usbkeyuuid}:${usbkeydateisystem}:\/archkey "
     fi
 
+    [[ -z "${autostartdesktop}" ]] && autostartdesktop=sway
+    [[ -z "${lang}" ]] && lang=de_DE
+    [[ -z "${keytable}" ]] && keytable=de
+    [[ -z "${tz}" ]] && tz=Europe/Berlin
+
     parameter="${parameter}autostartdesktop=${autostartdesktop} lang=${lang} keytable=${keytable} tz=${tz} "
 
     sed -i '/GRUB_CMDLINE_LINUX=/d' ${mountpoint}/etc/default/grub
@@ -1430,7 +1435,7 @@ if [ "${fastinstall}" == "y" ] && [ "${fastinstallnext}" != "y" ]; then
     /opt/${repo}/arch-install.sh "${1} fastinstallnext=y "
     exit 0
 elif [ "${phaseone}" != "n" ] && [ "${fastinstallnext}" != "y" ]; then
-    if wget -qO- ipv4.icanhazip.com 1>/dev/null 2>&1; then
+    if ping -q -c 1 -W 1 8.8.8.8 >/dev/null; then
         read -p "Should I look at the internet for a new install script and then run it ?: [Y/n] " update
         if [ "${update}" == "debug" ]
         then
@@ -1440,13 +1445,7 @@ elif [ "${phaseone}" != "n" ] && [ "${fastinstallnext}" != "y" ]; then
             then
                 read -p "Should I update youre packages and then run it ?: [y/N] " updatepackages
                 if [ "${updatepackages}" == "y" ]; then
-                    echo "Please dont update the linux kernel!!!"
-                    if [ -f  /opt/${repo}/packages.txt ]; then
-                        pacman -Syu $(cat /opt/${repo}/packages.txt) --noconfirm --needed --ignore linux
-                    else
-                        echo "Kann keine neuen Packete nachinstallieren weil die base.txt nicht gefunden werden kann!!"
-                        echo "Es kann sein das dass Programm nicht korrekt funktioniert!!!"
-                    fi
+                    pacman -Sy arch-install-scripts squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie memtest86+
                 fi
                 gitclone
                 /opt/${repo}/arch-install.sh "${1} phaseone=n "
