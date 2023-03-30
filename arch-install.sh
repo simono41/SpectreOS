@@ -1152,7 +1152,7 @@ function abfrage() {
             m2ssddevice=y
         fi
 
-        echo "BTRFS dos´nt support 32-Bit Systems!!!"
+        echo "BTRFS dosnt support 32-Bit Systems!!!"
         read -p "Which file system should be used? [BTRFS/ext4] " dateisystem
         [[ -z "${dateisystem}" ]] && dateisystem=btrfs
 
@@ -1443,9 +1443,9 @@ elif [ "${phaseone}" != "n" ] && [ "${fastinstallnext}" != "y" ]; then
         else
             if [ "${update}" != "n" ]
             then
-                read -p "Should I update youre packages and then run it ?: [y/N] " updatepackages
+                read -p "Should I install packages required for the installation and then run it ?: [y/N] " updatepackages
                 if [ "${updatepackages}" == "y" ]; then
-                    pacman -Sy arch-install-scripts squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie memtest86+
+                    pacman -Sy arch-install-scripts squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie memtest86+ --needed
                 fi
                 gitclone
                 /opt/${repo}/arch-install.sh "${1} phaseone=n "
