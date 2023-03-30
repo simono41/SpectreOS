@@ -712,7 +712,7 @@ function installation {
     fi
 
     #forbtrfssnapshots
-    cp ${mountpoint}/etc/fstab ${mountpoint}/etc/fstab.default
+    cp ${mountpoint}/etc/fstab ${mountpoint}/etc/fstab.backup
 
 }
 

@@ -20,8 +20,10 @@ if [ "make" == "$1" ] || [ "add" == "$1" ] || [ "backup" == "$1" ] || [ "cp" == 
         
         echo "${timetoday}" > /btrfs-root/__current/${pfad}/SNAPSHOT
         echo "BACKUP" >> /btrfs-root/__current/${pfad}/SNAPSHOT
+
+        cp /etc/fstab /etc/fstab.backup
         
-        sed -i "s|__current/${pfad}|__snapshot/${pfad}@`head -n 1 /btrfs-root/__current/${pfad}/SNAPSHOT`|g;" /etc/fstab.default
+        sed -i "s|__current/${pfad}|__snapshot/${pfad}@`head -n 1 /btrfs-root/__current/${pfad}/SNAPSHOT`|g;" /etc/fstab
         
         mkdir -p /btrfs-root/__snapshot/${pfad%/*}
         btrfs subvolume snapshot /btrfs-root/__current/${pfad} /btrfs-root/__snapshot/${pfad}@`head -n 1 /btrfs-root/__current/${pfad}/SNAPSHOT`
@@ -36,7 +38,7 @@ if [ "make" == "$1" ] || [ "add" == "$1" ] || [ "backup" == "$1" ] || [ "cp" == 
     done
     
     #reset-fstab
-    cp /etc/fstab /etc/fstab.default
+    cp /etc/fstab.backup /etc/fstab
     
     kernel="initramfs-linux.img"
     linuz="vmlinuz-linux"
