@@ -13,6 +13,9 @@ timetoday="$(date "+%Y%m%d-%H%M%S")"
 
 if [ "make" == "$1" ] || [ "add" == "$1" ] || [ "backup" == "$1" ] || [ "cp" == "$1" ] || [ "create" == "$1" ]; then
     
+    # Backup fstab
+    cp /etc/fstab /etc/fstab.backup
+
     while (( "$(expr $# - 1)" ))
     do
         
@@ -20,8 +23,6 @@ if [ "make" == "$1" ] || [ "add" == "$1" ] || [ "backup" == "$1" ] || [ "cp" == 
         
         echo "${timetoday}" > /btrfs-root/__current/${pfad}/SNAPSHOT
         echo "BACKUP" >> /btrfs-root/__current/${pfad}/SNAPSHOT
-
-        cp /etc/fstab /etc/fstab.backup
         
         sed -i "s|__current/${pfad}|__snapshot/${pfad}@`head -n 1 /btrfs-root/__current/${pfad}/SNAPSHOT`|g;" /etc/fstab
         
