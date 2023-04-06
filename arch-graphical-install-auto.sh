@@ -34,9 +34,11 @@ do
     shift
 done
 
-if cat /etc/passwd | grep "x:1000" > /dev/null; then
-    tempuser=$(cat /etc/passwd | grep "x:1000" | awk '{print $1}')
+if cat /etc/passwd | grep "x:2000" > /dev/null; then
+    tempuser=$(cat /etc/passwd | grep "x:2000" | awk '{print $1}')
     user=${tempuser%%:*}
+#else
+#    user=$(whoami)
 fi
 
 function pacmanconf() {
@@ -104,8 +106,8 @@ function standartinstallation() {
 
 function addusers() {
     # Erstelle Gruppen
-    groupid=1000
-    for wort in users wheel audio input power storage video sys optical adm lp scanner sddm kvm fuse autologin network wireshark docker libvirt libvirtdbus; do
+    groupid=2000
+    for wort in master users wheel audio input power storage video sys optical adm lp scanner sddm kvm fuse autologin network wireshark docker libvirt libvirtdbus; do
         if ! cat /etc/group | grep ${wort}; then
             while cat /etc/group | grep ${groupid}; do
                 groupid=$((${groupid} + 1))
@@ -114,12 +116,12 @@ function addusers() {
         fi
     done
 
-    useruid=1000
+    useruid=2000
     while cat /etc/passwd | grep ${useruid}; do
         useruid=$((${useruid} + 1))
     done
 
-    useradd -m -g users -G wheel,audio,input,power,storage,video,sys,optical,adm,lp,scanner,sddm,kvm,fuse,autologin,network,wireshark,docker,libvirt,libvirtdbus -s /usr/bin/zsh --uid ${useruid} ${user}
+    useradd -m -g master -G users,wheel,audio,input,power,storage,video,sys,optical,adm,lp,scanner,sddm,kvm,fuse,autologin,network,wireshark,docker,libvirt,libvirtdbus -s /usr/bin/zsh --uid ${useruid} ${user}
     echo "${user}:${userpass}" | chpasswd
     mkdir -p /home/${user}/
     userrechte
@@ -255,7 +257,7 @@ pacmanconf
 if [ "$1" == "adduser" ]; then
     user="$2"
     userpass="$3"
-    if cat /etc/passwd | grep "x:1000" > /dev/null; then
+    if cat /etc/passwd | grep "x:2000" > /dev/null; then
         echo "${user} existiert bereits!!!"
     else
         addusers

@@ -11,8 +11,8 @@ repo1=shell-scripte-code
 cache=/var/cache/pacman/pkg/
 repo_url="https://git.spectreos.de/simono41/SpectreOS/raw/master/repo.sh"
 
-if cat /etc/passwd | grep "x:1000" > /dev/null; then
-    tempuser=$(cat /etc/passwd | grep "x:1000" | awk '{print $1}')
+if cat /etc/passwd | grep "x:2000" > /dev/null; then
+    tempuser=$(cat /etc/passwd | grep "x:2000" | awk '{print $1}')
     user=${tempuser%%:*}
 else
     user=$(whoami)

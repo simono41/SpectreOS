@@ -6,9 +6,11 @@ cmdlineparameter=$(cat /proc/cmdline)
 repo=SpectreOS
 user=user1
 
-if cat /etc/passwd | grep "x:1000" > /dev/null; then
-    tempuser=$(cat /etc/passwd | grep "x:1000" | awk '{print $1}')
+if cat /etc/passwd | grep "x:2000" > /dev/null; then
+    tempuser=$(cat /etc/passwd | grep "x:2000" | awk '{print $1}')
     user=${tempuser%%:*}
+#else
+#    user=$(whoami)
 fi
 
 for wort in $(cat /proc/cmdline)
