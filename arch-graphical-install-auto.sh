@@ -107,7 +107,7 @@ function standartinstallation() {
 function addusers() {
     # Erstelle Gruppen
     groupid=1000
-    for wort in users wheel audio input power storage video sys optical adm lp scanner sddm kvm fuse autologin network wireshark docker libvirt libvirtdbus; do
+    for wort in ${user} users wheel audio input power storage video sys optical adm lp scanner sddm kvm fuse autologin network wireshark docker libvirt libvirtdbus; do
         if ! cat /etc/group | grep ${wort}; then
             while cat /etc/group | grep ${groupid}; do
                 groupid=$((${groupid} + 1))
@@ -121,7 +121,7 @@ function addusers() {
         useruid=$((${useruid} + 1))
     done
 
-    useradd -m -G users,wheel,audio,input,power,storage,video,sys,optical,adm,lp,scanner,sddm,kvm,fuse,autologin,network,wireshark,docker,libvirt,libvirtdbus -s /usr/bin/zsh --uid ${useruid} ${user}
+    useradd -m -g ${user} -G users,wheel,audio,input,power,storage,video,sys,optical,adm,lp,scanner,sddm,kvm,fuse,autologin,network,wireshark,docker,libvirt,libvirtdbus -s /usr/bin/zsh --uid ${useruid} ${user}
     echo "${user}:${userpass}" | chpasswd
     mkdir -p /home/${user}/
     userrechte
@@ -156,7 +156,7 @@ function add_plymouth() {
 
 function userrechte() {
     #user
-    chown -cR "$user":users /home/"$user"
+    chown -cR "$user":"$user" /home/"$user"
     #chmod 750 -R /home/"$user"
     #ssh
     if ! [ -d /home/"$user"/.ssh ]; then
@@ -178,7 +178,7 @@ function userrechte() {
     #gnupg
     mkdir -p /home/"$user"/.gnupg
     chmod -R 700 /home/"$user"/.gnupg
-    chown -cRv "$user":users /home/${user}/.gnupg
+    chown -cRv "$user":"$user" /home/${user}/.gnupg
     if [ -f /home/${user}/.gnupg/* ]; then
         chmod -v 600 /home/${user}/.gnupg/*
     fi
@@ -293,7 +293,7 @@ echo "Lege $SUDOERS neu an!!!"
 
 echo "root ALL=(ALL) NOPASSWD: ALL" > $SUDOERS
 echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> $SUDOERS
-echo "%master ALL=(ALL) NOPASSWD: ALL" >> $SUDOERS
+#echo "%master ALL=(ALL) NOPASSWD: ALL" >> $SUDOERS
 
 # Setze die die UIDs und GIDs standartmässig auf 2000 bei der erstellung von neuen Benutzern und Gruppen
 #sed -i 's/^UID_MIN.*$/UID_MIN 2000/' /etc/login.defs
