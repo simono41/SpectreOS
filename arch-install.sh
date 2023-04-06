@@ -6,10 +6,11 @@ clear
 
 git config --global credential.helper store
 arch=$(uname -m)
+branch=master
 repo=SpectreOS
 repo1=shell-scripte-code
 cache=/var/cache/pacman/pkg/
-repo_url="https://git.spectreos.de/simono41/SpectreOS/raw/master/repo.sh"
+repo_url="https://git.brothertec.eu/simono41/SpectreOS/raw/master/repo.sh"
 
 if cat /etc/passwd | grep "x:1000" > /dev/null; then
     tempuser=$(cat /etc/passwd | grep "x:1000" | awk '{print $1}')
@@ -85,7 +86,7 @@ function gitclone() {
     if [ -d "/opt/${repo}" ]; then
         echo "${repo} existiert bereits!!!"
         cd /opt/${repo}
-        git checkout ${arch}
+        git checkout ${branch}
         if ! git remote set-url origin ${WEBADDRESS_OS}; then
             git remote add origin ${WEBADDRESS_OS}
         fi
