@@ -107,7 +107,7 @@ function standartinstallation() {
 function addusers() {
     # Erstelle Gruppen
     groupid=1000
-    for wort in master users wheel audio input power storage video sys optical adm lp scanner sddm kvm fuse autologin network wireshark docker libvirt libvirtdbus; do
+    for wort in users wheel audio input power storage video sys optical adm lp scanner sddm kvm fuse autologin network wireshark docker libvirt libvirtdbus; do
         if ! cat /etc/group | grep ${wort}; then
             while cat /etc/group | grep ${groupid}; do
                 groupid=$((${groupid} + 1))
@@ -121,7 +121,7 @@ function addusers() {
         useruid=$((${useruid} + 1))
     done
 
-    useradd -m -g master -G users,wheel,audio,input,power,storage,video,sys,optical,adm,lp,scanner,sddm,kvm,fuse,autologin,network,wireshark,docker,libvirt,libvirtdbus -s /usr/bin/zsh --uid ${useruid} ${user}
+    useradd -m -G users,wheel,audio,input,power,storage,video,sys,optical,adm,lp,scanner,sddm,kvm,fuse,autologin,network,wireshark,docker,libvirt,libvirtdbus -s /usr/bin/zsh --uid ${useruid} ${user}
     echo "${user}:${userpass}" | chpasswd
     mkdir -p /home/${user}/
     userrechte
@@ -296,8 +296,8 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> $SUDOERS
 echo "%master ALL=(ALL) NOPASSWD: ALL" >> $SUDOERS
 
 # Setze die die UIDs und GIDs standartmässig auf 2000 bei der erstellung von neuen Benutzern und Gruppen
-sed -i 's/^UID_MIN.*$/UID_MIN 2000/' /etc/login.defs
-sed -i 's/^GID_MIN.*$/GID_MIN 2000/' /etc/login.defs
+#sed -i 's/^UID_MIN.*$/UID_MIN 2000/' /etc/login.defs
+#sed -i 's/^GID_MIN.*$/GID_MIN 2000/' /etc/login.defs
 
 # systemaktualisierung
 

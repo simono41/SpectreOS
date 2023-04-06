@@ -1570,6 +1570,7 @@ fi
 
 # Nur nötig wenn der Name gleich dem Usernamen gleichen soll
 arch-chroot ${mountpoint} usermod -l "${user}" "user1"
+arch-chroot ${mountpoint} groupmod -n "${user}" "user1"
 arch-chroot ${mountpoint} usermod -d /home/"${user}" -m "${user}"
 arch-chroot ${mountpoint} chfn -f "${name}" "${user}"
 arch-chroot ${mountpoint} chsh -s /usr/bin/zsh ${user}
