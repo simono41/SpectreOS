@@ -170,7 +170,7 @@ xdg-user-dirs-gtk
 xorg-server xorg-xinit xorg-drivers
 xournalpp libreoffice libreoffice-fresh-de
 libwacom xf86-input-wacom
-yt-dlp
+yt-dlp python-mutagen
 python-pyxdg
 archlinux-xdg-menu
 python-jeepney

@@ -7,4 +7,4 @@ Target = pacman-mirrorlist
 [Action]
 Description = Updating pacman-mirrorlist and the pacman config after updating
 When = PostTransaction
-Exec = /bin/bash -c "cp /opt/deadc0de-remix-os/%VERSION% /etc/pacman.conf"
+Exec = /bin/bash -c "cp /opt/SpectreOS/%VERSION% /etc/pacman.conf"
