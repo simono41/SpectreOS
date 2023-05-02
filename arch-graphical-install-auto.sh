@@ -640,6 +640,9 @@ aurinstaller wvkbd
 # All your services in one place
 aurinstaller ferdium-bin
 
+# Clipboard Manager
+aurinstaller clipman
+
 # background temparature
 aurinstaller wl-gammarelay-rs
 if [ "${archisoinstall}" == "y" ]; then
@@ -667,7 +670,7 @@ fc-cache -f -v
 # Icons
 gsettings set org.gnome.desktop.interface cursor-theme capitaine-cursors
 gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
-gsettings set org.gnome.desktop.interface icon-theme Arc
+gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
 gsettings set org.gnome.desktop.wm.preferences theme "Arc-Dark"
 
 gtk-update-icon-cache
