@@ -662,9 +662,9 @@ fc-cache -f -v
 
 # Icons
 gsettings set org.gnome.desktop.interface cursor-theme capitaine-cursors
-gsettings set org.gnome.desktop.interface gtk-theme Arc-Darker
+gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
 gsettings set org.gnome.desktop.interface icon-theme Arc
-gsettings set org.gnome.desktop.wm.preferences theme "Arc-Darker"
+gsettings set org.gnome.desktop.wm.preferences theme "Arc-Dark"
 
 gtk-update-icon-cache
 

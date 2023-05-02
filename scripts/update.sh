@@ -49,7 +49,7 @@ if [ -d "/opt/${repo}" ]; then
     fi
 cd /
 
-cp /opt/${repo}/arch-graphical-install-auto.sh /usr/bin/arch-graphical-install-auto.sh
-/usr/bin/arch-graphical-install-auto.sh
+cp /opt/${repo}/arch-graphical-install-auto.sh /usr/bin/arch-graphical-install-auto
+/usr/bin/arch-graphical-install-auto
 
 echo "Fertig!!!"
