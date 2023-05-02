@@ -40,6 +40,7 @@ swaylock
 grim
 slurp
 waybar
+otf-font-awesome
 wofi
 brightnessctl
 foot
