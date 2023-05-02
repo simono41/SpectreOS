@@ -632,9 +632,13 @@ aurinstaller wob
 
 # logout screen
 aurinstaller wlogout
+aurinstaller wcp
 
 # on-screen keyboard (start with wvkbd-mobintl)
 aurinstaller wvkbd
+
+# All your services in one place
+aurinstaller ferdium-bin
 
 # background temparature
 aurinstaller wl-gammarelay-rs
