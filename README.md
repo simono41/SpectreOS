@@ -20,7 +20,7 @@
     DISPLAY=:0 wine Wow.exe -opengl
 
 ### Zum anzeigen der Größe der installierten Packeten
-    LC_ALL=C pacman -Qi | egrep '^(Name|Installed)' | cut -f2 -d':' | tr '\nK' ' \n' | sort -nrk 3 | less
+    LC_ALL=C pacman -Qi | awk '/^Name/{name=$3} /^Installed Size/{print $4$5, name}' | sort -h
 
 ### Zum starten einer Sitzung mit Mosh
     LC_ALL="en_US.UTF-8" mosh --ssh="ssh -p PORT" user@server
