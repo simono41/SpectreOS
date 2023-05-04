@@ -29,6 +29,7 @@ pipewire
 pipewire-alsa
 pipewire-pulse
 pipewire-jack
+pipewire-v4l2
 wireplumber
 pamixer
 xdg-desktop-portal-wlr
@@ -45,6 +46,7 @@ otf-font-awesome
 wofi
 brightnessctl
 foot
+wf-recorder
 nautilus
 libreoffice-fresh
 gnome-system-monitor
