@@ -15,7 +15,7 @@ mkdir -p /home/${user}/aur-builds
 cd /home/${user}/aur-builds
 pwd
 
-function aurinstaller() {
+function download_repo() {
     if git clone ${url}; then
         echo "git erfolgreich runtergeladen!!!"
     else
@@ -29,15 +29,18 @@ function aurinstaller() {
 
 }
 
-if [ -d ${packagename} ];then
-    echo "Bereits vorhanden!!!"
-    cd ${packagename}
-    #git reset --hard
-    git clean -fdx
-    git pull
-else
-    aurinstaller
-fi
+# Überprüfe ob es eine neue Version gibt
+function checkversion() {
+    installed_version=$(LC_ALL=C pacman -Qi ${packagename} | awk '/^Version/{print $3}' | awk -F- '{ print $1 }')
+    new_version=$(awk --field-separator='=' '/^pkgver/{print $2}' PKGBUILD | head -n1 | sed -e "s/'//g" -e "s/\"//g")
+    # Überprüfe ob eine Version bereits installiert ist
+    if [ -n "$installed_version" ]; then
+        if [ "$new_version" = "$installed_version" ]; then
+            echo "Es existiert zurzeit keine neuere Version"
+            exit 0
+        fi
+    fi
+}
 
 function aurinstallwithoutroot() {
     makepkg -si --skipchecksums --skippgpcheck --nocheck --noconfirm --install --needed
@@ -46,6 +49,17 @@ function aurinstallwithoutroot() {
 function aurinstallwithroot() {
     su "${user}" -c "makepkg -si --skipchecksums --skippgpcheck --nocheck --noconfirm --install --needed"
 }
+
+if [ -d ${packagename} ];then
+    echo "Bereits vorhanden!!!"
+    cd ${packagename}
+    git pull
+    checkversion
+    git clean -fdx
+    #git reset --hard
+else
+    download_repo
+fi
 
 if ! [[ $EUID -ne 0 ]]; then
     run=aurinstallwithroot

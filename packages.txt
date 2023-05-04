@@ -12,6 +12,7 @@ libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau libvdpau-v
 openscad prusa-slicer slicer-udev
 man man-pages man-pages-de
 nginx certbot-nginx
+v4l2loopback-dkms obs-studio python opencv python-opencv clang flatbuffers python-flatbuffers
 libheif
 at-spi2-core
 python-atspi

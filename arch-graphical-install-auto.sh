@@ -643,6 +643,9 @@ aurinstaller ferdium-bin
 # Clipboard Manager
 aurinstaller clipman
 
+# OBS-Backgroundremover
+aurinstaller obs-backgroundremoval
+
 # background temparature
 #aurinstaller wl-gammarelay-rs
 #if [ "${archisoinstall}" == "y" ]; then
