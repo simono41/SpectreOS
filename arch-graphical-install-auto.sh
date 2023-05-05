@@ -646,6 +646,9 @@ aurinstaller clipman
 # OBS-Backgroundremover
 aurinstaller obs-backgroundremoval
 
+# QT5 Styleplugins (Default GTK Arc-Dark Theme)
+aurinstaller qt5-styleplugins
+
 # background temparature
 #aurinstaller wl-gammarelay-rs
 #if [ "${archisoinstall}" == "y" ]; then
