@@ -142,7 +142,7 @@ gparted
 grim
 htop
 jre-openjdk
-qt5ct lxde-gtk3 lxqt imv evince qtpass
+qt5ct lxde-gtk3 lxqt imv evince qtpass qtcurve-qt5 qtcurve-gtk2
 network-manager-applet
 networkmanager
 networkmanager-fortisslvpn
@@ -160,7 +160,7 @@ polkit
 python
 qemu-system-x86
 qemu-hw-display-qxl
-sway i3-wm i3status-rust rust i3blocks i3lock arandr rofi dunst feh scrot xtrlock clipmenu
+sway i3-wm i3status-rust rust i3blocks i3lock arandr rofi dunst feh scrot xtrlock clipmenu pinentry pinentry-bemenu
 swaybg
 swayidle
 swaylock
