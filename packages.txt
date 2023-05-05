@@ -31,7 +31,9 @@ pipewire-pulse
 pipewire-jack
 pipewire-v4l2
 wireplumber
-lib32-pipewire lib32-pipewire-v4l2
+lib32-pipewire
+lib32-pipewire-jack
+lib32-pipewire-v4l2
 pamixer
 xdg-desktop-portal-wlr
 xorg-xwayland
