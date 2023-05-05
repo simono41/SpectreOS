@@ -608,12 +608,8 @@ su ${user} -l -c "chezmoi update -v"
 #fi
 
 #aurinstaller conky-lua-nv
-#aurinstaller passdmenu
 #aurinstaller ntfysh-bin
-#aurinstaller spotify
-#aurinstaller https://github.com/MultiMC/multimc-pkgbuild
 #aurinstaller jetbrains-toolbox
-#aurinstaller kickoff
 
 # Minecraft-launcher
 aurinstaller polymc-bin
@@ -648,6 +644,9 @@ aurinstaller obs-backgroundremoval
 
 # QT5 Styleplugins (Default GTK Arc-Dark Theme)
 aurinstaller qt5-styleplugins
+
+# Passwortmanager for dmenu (i3)
+aurinstaller passdmenu
 
 # background temparature
 #aurinstaller wl-gammarelay-rs
