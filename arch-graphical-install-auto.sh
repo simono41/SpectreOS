@@ -633,6 +633,9 @@ aurinstaller wcp
 # on-screen keyboard (start with wvkbd-mobintl)
 aurinstaller wvkbd
 
+# Visual music player for wayland
+aurinstaller vmp
+
 # All your services in one place
 aurinstaller ferdium-bin
 
