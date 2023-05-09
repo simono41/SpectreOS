@@ -1,83 +1,140 @@
-dhcpcd nano vim vim-spell-de intel-ucode amd-ucode iwd lvm2
-btrfs-progs ntfs-3g exfatprogs
-arch-install-scripts squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie memtest86+
 acpid dbus avahi ntp fail2ban alsa-utils alsa-tools bash-completion
-zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-lovers
-pavucontrol pamixer wget
-mesa-utils egl-wayland wofi mako mpv fuzzel bemenu-wayland wayvnc xdg-desktop-portal-wlr slurp grim jq
-remmina libvncserver spice-gtk freerdp gtk-vnc element-desktop trash-cli
-mosh mitmproxy net-tools bind traceroute mtr hydra aircrack-ng
-libva-intel-driver intel-media-driver org.freedesktop.secrets gnome-keyring
-libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau libvdpau-va-gl
-openscad prusa-slicer slicer-udev
-man man-pages man-pages-de
-nginx certbot-nginx
-v4l2loopback-dkms obs-studio python opencv python-opencv clang flatbuffers python-flatbuffers
-libheif
-at-spi2-core
-python-atspi
-terminus-font 
-sudo
-zsh
-zsh-autosuggestions
-zsh-syntax-highlighting fzf tmux fish pkgfile
-iwd
-bluez
-bluez-utils
-blueman
-pipewire
-pipewire-alsa
-pipewire-pulse
-pipewire-jack
-pipewire-v4l2
-wireplumber
-lib32-pipewire
-lib32-pipewire-jack
-lib32-pipewire-v4l2
-pamixer
-xdg-desktop-portal-wlr
-xorg-xwayland
-wayland-protocols
-sway
-swaybg
-swayidle
-swaylock
-grim
-slurp
-waybar
-otf-font-awesome
-wofi
-brightnessctl
-foot
-wf-recorder
-nautilus
-libreoffice-fresh
-gnome-system-monitor
-system-config-printer
-cups
-polkit-gnome
-wl-clipboard
-pavucontrol
-qt5-wayland
-qt6-wayland
-emacs
 adapta-gtk-theme
 adwaita-qt5
 adwaita-qt6
+alacritty wezterm
+arc-gtk-theme
+arc-icon-theme
+arc-solid-gtk-theme
+arch-install-scripts squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie memtest86+
+archlinux-xdg-menu
+at-spi2-core
+base base-devel linux linux-firmware
+bashtop
+blueman
+bluez
+bluez-utils
+breeze-icons oxygen-icons
+brightnessctl
+browserpass
+browserpass-chromium
+browserpass-firefox
+btrfs-progs ntfs-3g exfatprogs
+capitaine-cursors
+chezmoi
+chromium
+cmake gradle
+code
+cups
+cups hplip
+dhcpcd nano vim vim-spell-de intel-ucode amd-ucode iwd lvm2
+docker docker-compose
+emacs
+filezilla
+firefox-dark-reader
+firefox-i18n-de
+firefox-ublock-origin
+foot
+gammastep
+gimp
+git
+gnome-system-monitor
+gnupg
+gparted
+grim
+grim
+gst-libav
+gst-plugin-gtk
+gst-plugin-pipewire
+gst-plugins-bad
+gst-plugins-bad-libs
+gst-plugins-base
+gst-plugins-base-libs
+gst-plugins-good
+gst-plugins-ugly
+gstreamer
+gvfs
+gvfs-afc
+gvfs-goa
+gvfs-google
+gvfs-gphoto2
+gvfs-mtp
+gvfs-nfs
+gvfs-smb
+htop
+iwd
+jre-openjdk
+keychain
 lib32-at-spi2-core
+lib32-pipewire
+lib32-pipewire-jack
+lib32-pipewire-v4l2
 lib32-vulkan-icd-loader
 lib32-vulkan-intel
 lib32-vulkan-mesa-layers
 lib32-vulkan-radeon
 lib32-vulkan-validation-layers
-vulkan-headers
-vulkan-icd-loader
-vulkan-intel
-vulkan-mesa-layers
-vulkan-radeon
-vulkan-tools
-breeze-icons oxygen-icons
+libheif
+libreoffice-fresh
+libva-intel-driver intel-media-driver org.freedesktop.secrets gnome-keyring
+libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau libvdpau-va-gl
+libwacom xf86-input-wacom
+man man-pages man-pages-de
+mesa-utils egl-wayland wofi mako mpv fuzzel bemenu-wayland wayvnc xdg-desktop-portal-wlr slurp grim jq
+mosh mitmproxy net-tools bind traceroute mtr hydra aircrack-ng
+nautilus
+network-manager-applet
+networkmanager
+networkmanager-fortisslvpn
+networkmanager-openvpn
+networkmanager-qt
+nginx certbot-nginx
+nm-connection-editor
+noto-fonts
+noto-fonts-emoji
+noto-fonts-extra
+openscad prusa-slicer slicer-udev
+opus-tools vorbis-tools flac ffmpeg
+otf-font-awesome
+pamixer
 pango papirus-icon-theme pass pass-otp
+pavucontrol
+pavucontrol pamixer wget
+pdfmod
+pipewire
+pipewire-alsa
+pipewire-jack
+pipewire-pulse
+pipewire-v4l2
+pixz pigz zstd xz
+pkg-config gcc
+polkit
+polkit-gnome
+python
+python-atspi
+python-jeepney
+python-pyxdg
+qemu-hw-display-qxl
+qemu-system-x86
+qt5-wayland
+qt5ct qt6ct lxde-gtk3 lxqt imv evince qtpass qtcurve-qt5 qtcurve-gtk2
+qt6-wayland
+remmina libvncserver spice-gtk freerdp gtk-vnc element-desktop trash-cli
+slurp
+starship
+sudo
+sway
+sway i3-wm i3status-rust rust i3blocks i3lock arandr rofi dunst feh scrot xtrlock clipmenu pinentry pinentry-bemenu
+swaybg
+swaybg
+swayidle
+swayidle
+swaylock
+swaylock
+syncthing
+system-config-printer
+terminus-font 
+thunderbird thunderbird-i18n-de thunderbird-dark-reader
 ttc-iosevka
 ttf-bitstream-vera
 ttf-carlito
@@ -89,100 +146,44 @@ ttf-fira-sans
 ttf-font-awesome
 ttf-hack
 ttf-hack-nerd
-ttf-meslo-nerd
 ttf-jetbrains-mono
 ttf-liberation
+ttf-meslo-nerd
 ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-common
 ttf-nerd-fonts-symbols-mono
 ttf-opensans
-gst-libav
-gst-plugin-gtk
-gst-plugin-pipewire
-gst-plugins-bad
-gst-plugins-bad-libs
-gst-plugins-base
-gst-plugins-base-libs
-gst-plugins-good
-gst-plugins-ugly
-gvfs
-gvfs-afc
-gvfs-goa
-gvfs-google
-gvfs-gphoto2
-gvfs-mtp
-gvfs-nfs
-gvfs-smb
-pdfmod
-gstreamer
-keychain
-starship
-cups hplip
-alacritty wezterm
-arc-gtk-theme
-arc-icon-theme
-arc-solid-gtk-theme
-base base-devel linux linux-firmware
-bashtop
-browserpass
-browserpass-chromium
-browserpass-firefox
-capitaine-cursors
-chezmoi
-chromium
-cmake gradle
-code
-filezilla
-firefox-dark-reader
-firefox-i18n-de
-firefox-ublock-origin
-thunderbird thunderbird-i18n-de thunderbird-dark-reader
-gimp
-git
-gnupg
-gparted
-grim
-htop
-jre-openjdk
-qt5ct qt6ct lxde-gtk3 lxqt imv evince qtpass qtcurve-qt5 qtcurve-gtk2
-network-manager-applet
-networkmanager
-networkmanager-fortisslvpn
-networkmanager-openvpn
-networkmanager-qt
-nm-connection-editor
-wpa_supplicant
-noto-fonts
-noto-fonts-emoji
-noto-fonts-extra
-opus-tools vorbis-tools flac ffmpeg
-pixz pigz zstd xz
-pkg-config gcc
-polkit
-python
-qemu-system-x86
-qemu-hw-display-qxl
-sway i3-wm i3status-rust rust i3blocks i3lock arandr rofi dunst feh scrot xtrlock clipmenu pinentry pinentry-bemenu
-swaybg
-swayidle
-swaylock
-gammastep
-wl-clipboard
-syncthing
+v4l2loopback-dkms obs-studio python opencv python-opencv clang flatbuffers python-flatbuffers
 vlc
+vulkan-headers
+vulkan-icd-loader
+vulkan-intel
+vulkan-mesa-layers
+vulkan-radeon
+vulkan-tools
+waybar
+wayland-protocols
+wf-recorder
 wine
 wine-gecko
 wine-mono
 winetricks
 wireguard-tools
+wireplumber
+wl-clipboard
+wl-clipboard
+wofi
+wpa_supplicant
 xarchiver
+xdg-desktop-portal-gtk
+xdg-desktop-portal-wlr
 xdg-user-dirs
 xdg-user-dirs-gtk
 xorg-server xorg-xinit xorg-drivers
+xorg-xwayland
 xournalpp libreoffice libreoffice-fresh-de
-libwacom xf86-input-wacom
 yt-dlp python-mutagen
-python-pyxdg
-archlinux-xdg-menu
-python-jeepney
-docker docker-compose
+zsh
+zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-lovers
+zsh-autosuggestions
+zsh-syntax-highlighting fzf tmux fish pkgfile
