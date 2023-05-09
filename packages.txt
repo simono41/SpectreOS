@@ -98,7 +98,6 @@ opus-tools vorbis-tools flac ffmpeg
 otf-font-awesome
 pamixer
 pango papirus-icon-theme pass pass-otp
-pavucontrol
 pavucontrol pamixer wget
 pdfmod
 pipewire
@@ -123,17 +122,10 @@ remmina libvncserver spice-gtk freerdp gtk-vnc element-desktop trash-cli
 slurp
 starship
 sudo
-sway
-sway i3-wm i3status-rust rust i3blocks i3lock arandr rofi dunst feh scrot xtrlock clipmenu pinentry pinentry-bemenu
-swaybg
-swaybg
-swayidle
-swayidle
-swaylock
-swaylock
+sway swaybg swayidle swaylock wl-clipboard wireplumber waybar wayland-protocols wf-recorder
+i3-wm i3status-rust rust i3blocks i3lock arandr rofi dunst feh scrot xtrlock clipmenu pinentry pinentry-bemenu
 syncthing
 system-config-printer
-terminus-font 
 thunderbird thunderbird-i18n-de thunderbird-dark-reader
 ttc-iosevka
 ttf-bitstream-vera
@@ -153,6 +145,7 @@ ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-common
 ttf-nerd-fonts-symbols-mono
 ttf-opensans
+ttf-terminus-nerd terminus-font
 v4l2loopback-dkms obs-studio python opencv python-opencv clang flatbuffers python-flatbuffers
 vlc
 vulkan-headers
@@ -161,17 +154,11 @@ vulkan-intel
 vulkan-mesa-layers
 vulkan-radeon
 vulkan-tools
-waybar
-wayland-protocols
-wf-recorder
 wine
 wine-gecko
 wine-mono
 winetricks
 wireguard-tools
-wireplumber
-wl-clipboard
-wl-clipboard
 wofi
 wpa_supplicant
 xarchiver
@@ -183,7 +170,7 @@ xorg-server xorg-xinit xorg-drivers
 xorg-xwayland
 xournalpp libreoffice libreoffice-fresh-de
 yt-dlp python-mutagen
-zsh
-zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-lovers
-zsh-autosuggestions
-zsh-syntax-highlighting fzf tmux fish pkgfile
+zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting fzf
+tmux
+fish
+pkgfile
