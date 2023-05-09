@@ -1,8 +1,9 @@
+
+
 acpid dbus avahi ntp fail2ban alsa-utils alsa-tools bash-completion
 adapta-gtk-theme
 adwaita-qt5
 adwaita-qt6
-alacritty wezterm
 arc-gtk-theme
 arc-icon-theme
 arc-solid-gtk-theme
@@ -16,24 +17,20 @@ bluez
 bluez-utils
 breeze-icons oxygen-icons
 brightnessctl
-browserpass
-browserpass-chromium
-browserpass-firefox
 btrfs-progs ntfs-3g exfatprogs
 capitaine-cursors
 chezmoi
-chromium
+chromium browserpass-chromium
 cmake gradle
 code
 cups
 cups hplip
-dhcpcd nano vim vim-spell-de intel-ucode amd-ucode iwd lvm2
+dhcpcd intel-ucode amd-ucode iwd lvm2
 docker docker-compose
 emacs
 filezilla
-firefox-dark-reader
-firefox-i18n-de
-firefox-ublock-origin
+firefox firefox-i18n-de firefox-dark-reader firefox-ublock-origin browserpass browserpass-firefox
+fish
 foot
 gammastep
 gimp
@@ -62,6 +59,7 @@ gvfs-mtp
 gvfs-nfs
 gvfs-smb
 htop
+i3-wm i3status-rust rust i3blocks i3lock arandr rofi dunst feh scrot xtrlock clipmenu pinentry pinentry-bemenu
 iwd
 jre-openjdk
 keychain
@@ -82,6 +80,7 @@ libwacom xf86-input-wacom
 man man-pages man-pages-de
 mesa-utils egl-wayland wofi mako mpv fuzzel bemenu-wayland wayvnc xdg-desktop-portal-wlr slurp grim jq
 mosh mitmproxy net-tools bind traceroute mtr hydra aircrack-ng
+nano vim vim-spell-de
 nautilus
 network-manager-applet
 networkmanager
@@ -107,6 +106,7 @@ pipewire-pulse
 pipewire-v4l2
 pixz pigz zstd xz
 pkg-config gcc
+pkgfile
 polkit
 polkit-gnome
 python
@@ -123,10 +123,10 @@ slurp
 starship
 sudo
 sway swaybg swayidle swaylock wl-clipboard wireplumber waybar wayland-protocols wf-recorder
-i3-wm i3status-rust rust i3blocks i3lock arandr rofi dunst feh scrot xtrlock clipmenu pinentry pinentry-bemenu
 syncthing
 system-config-printer
 thunderbird thunderbird-i18n-de thunderbird-dark-reader
+tmux
 ttc-iosevka
 ttf-bitstream-vera
 ttf-carlito
@@ -154,6 +154,7 @@ vulkan-intel
 vulkan-mesa-layers
 vulkan-radeon
 vulkan-tools
+wezterm
 wine
 wine-gecko
 wine-mono
@@ -171,6 +172,3 @@ xorg-xwayland
 xournalpp libreoffice libreoffice-fresh-de
 yt-dlp python-mutagen
 zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting fzf
-tmux
-fish
-pkgfile
