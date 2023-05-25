@@ -1,5 +1,3 @@
-
-
 acpid dbus avahi ntp fail2ban alsa-utils alsa-tools bash-completion
 adapta-gtk-theme
 adwaita-qt5
@@ -29,7 +27,7 @@ dhcpcd intel-ucode amd-ucode iwd lvm2
 docker docker-compose
 emacs
 filezilla
-firefox firefox-i18n-de firefox-dark-reader firefox-ublock-origin browserpass browserpass-firefox
+firefox firefox-i18n-de firefox-dark-reader firefox-ublock-origin browserpass browserpass-firefox qutebrowser
 fish
 foot
 gammastep

@@ -634,7 +634,7 @@ aurinstaller wvkbd
 aurinstaller vmp
 
 # All your services in one place
-aurinstaller ferdium-bin
+#aurinstaller ferdium-bin
 
 # Clipboard Manager
 aurinstaller clipman
