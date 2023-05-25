@@ -27,8 +27,8 @@ dhcpcd intel-ucode amd-ucode iwd lvm2
 docker docker-compose
 emacs
 filezilla
-gvim xterm
-firefox firefox-i18n-de firefox-dark-reader firefox-ublock-origin browserpass browserpass-firefox qutebrowser ranger fff nnn lf
+firefox firefox-i18n-de firefox-dark-reader firefox-ublock-origin browserpass browserpass-firefox
+qutebrowser ranger fff nnn lf xterm
 fish
 foot
 gammastep
