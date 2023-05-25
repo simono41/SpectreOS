@@ -42,23 +42,20 @@ if cat /etc/passwd | grep "x:1000" > /dev/null; then
 fi
 
 function pacmanconf() {
-
     cp -v /opt/${repo}/mirrorlist* /etc/pacman.d/
-
     cp -v /opt/${repo}/pacman.conf /etc/pacman.conf
 
     pacman-key --init
     pacman-key --populate archlinux
 
     pacman -Syu git glibc --needed --noconfirm
-
 }
 
 function gitclone() {
     git config --global credential.helper store
     git config --global core.editor "vim"
-    git config --global user.email "user1@spectreos.de"
-    git config --global user.name "user1"
+    git config --global user.email "user@example.org"
+    git config --global user.name "user"
     git config --global push.default simple
     git config --global pull.rebase true
     git config --global --add safe.directory '*'

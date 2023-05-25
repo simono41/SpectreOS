@@ -78,9 +78,9 @@ function gitclone() {
 
     # SSH 1/2
     git config --global credential.helper store
-    git config --global core.editor "nano"
-    git config --global user.email "user1@spectreos.de"
-    git config --global user.name "user1"
+    git config --global core.editor "vim"
+    git config --global user.email "user@example.org"
+    git config --global user.name "user"
     git config --global push.default simple
     git config --global pull.rebase true
     if [ -d "/opt/${repo}" ]; then
