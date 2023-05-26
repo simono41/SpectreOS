@@ -23,7 +23,8 @@ function download_repo() {
         git clone "https://aur.archlinux.org/${url}.git"
     fi
     echo "Erstelle Dateirechte"
-    chmod 777 -R ${packagename}
+    chown -cR "$user":"$user" ${packagename}
+    #chmod 777 -R ${packagename}
     cd ${packagename}
 
 
