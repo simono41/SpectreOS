@@ -125,6 +125,7 @@ sway swaybg swayidle swaylock wl-clipboard wireplumber waybar wayland-protocols 
 syncthing
 system-config-printer
 thunderbird thunderbird-i18n-de thunderbird-dark-reader
+vdirsyncer khal
 tmux
 ttc-iosevka
 ttf-bitstream-vera
