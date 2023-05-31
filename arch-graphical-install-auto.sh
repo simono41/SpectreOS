@@ -629,6 +629,8 @@ aurinstaller wcp
 
 # on-screen keyboard (start with wvkbd-mobintl)
 aurinstaller wvkbd
+# and for x11
+aurinstaller svkbd-git
 
 # Visual music player for wayland
 aurinstaller vmp
