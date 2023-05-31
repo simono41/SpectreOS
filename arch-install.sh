@@ -1248,7 +1248,7 @@ function abfrage() {
         [[ -z "${nvidia}" ]] && nvidia=n
 
         if lspci | grep -e VGA -e 3D -m 1 | grep AMD; then
-            read -p "Will you have activate youre AMD driver? : [y/N] " amd
+            read -p "Have you a AMD Graphic-Card or a Steam Deck? : [amd/steam/N] " amd
         fi
         [[ -z "${amd}" ]] && amd=n
 
@@ -1620,10 +1620,14 @@ if [ "${nvidia}" == "y" ]; then
     echo "VK_ICD_FILENAMES=\"/usr/share/vulkan/icd.d/nvidia_icd.json\"" >> ${mountpoint}/etc/environment
 fi
 
-if [ "${amd}" == "y" ]; then
+if [ "${amd}" == "amd" ]; then
     arch-chroot ${mountpoint} pacman -Sy lib32-amdvlk amdvlk opencl-mesa lib32-opencl-mesa --needed --noconfirm
     # https://wiki.archlinux.org/title/Vulkan#Selecting_Vulkan_driver
     echo "VK_ICD_FILENAMES=\"/usr/share/vulkan/icd.d/amd_icd64.json\"" >> ${mountpoint}/etc/environment
+elif [ "${amd}" == "steam" ]; then
+    arch-chroot ${mountpoint} pacman -Sy lib32-amdvlk amdvlk opencl-mesa lib32-opencl-mesa --needed --noconfirm
+    # https://wiki.archlinux.org/title/Vulkan#Selecting_Vulkan_driver
+    echo "AMD_VULKAN_ICD=RADV" >> ${mountpoint}/etc/environment
 fi
 
 if [ "${multicard}" == "y" ]; then

@@ -74,7 +74,8 @@ lib32-vulkan-validation-layers
 libheif
 libreoffice-fresh
 libva-intel-driver intel-media-driver org.freedesktop.secrets gnome-keyring
-lib32-amdvlk amdvlk opencl-mesa lib32-opencl-mesa gamescope steam nvtop
+lib32-amdvlk amdvlk opencl-mesa lib32-opencl-mesa glad python-glfw qt6-shadertools vkd3d lib32-vkd3d vkmark vulkan-extra-layers vulkan-extra-tools vulkan-swrast vulkan-validation-layers vulkan-virtio lib32-vulkan-swrast lib32-vulkan-virtio
+gamescope steam nvtop
 libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau libvdpau-va-gl
 libwacom xf86-input-wacom
 man man-pages man-pages-de
