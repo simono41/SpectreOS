@@ -1239,6 +1239,9 @@ function abfrage() {
         read -p "Should you autologin in youre System? : [Y/n] " autologin
         [[ -z "${autologin}" ]] && autologin=y
 
+        read -p "Should you start Sway (default) or I3? : [SWAY/I3] " autostartdesktop
+        [[ -z "${autostartdesktop}" ]] && autostartdesktop=sway
+
         if lspci | grep -e VGA -e 3D -m 1 | grep NVIDIA; then
             read -p "Will you have activate youre Nvidia driver? : [y/N] " nvidia
         fi
@@ -1618,6 +1621,7 @@ if [ "${nvidia}" == "y" ]; then
 fi
 
 if [ "${amd}" == "y" ]; then
+    arch-chroot ${mountpoint} pacman -Sy lib32-amdvlk amdvlk opencl-mesa lib32-opencl-mesa --needed --noconfirm
     # https://wiki.archlinux.org/title/Vulkan#Selecting_Vulkan_driver
     echo "VK_ICD_FILENAMES=\"/usr/share/vulkan/icd.d/amd_icd64.json\"" >> ${mountpoint}/etc/environment
 fi
