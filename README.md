@@ -41,6 +41,9 @@
     gsettings set org.gnome.desktop.interface icon-theme Arc
     gsettings set org.gnome.desktop.wm.preferences theme "Arc-Dark"
 
+### Um das xdg-desktop-portal-gnome nicht mehr zu starten
+    systemctl --user mask xdg-desktop-portal-gnome.service
+
 ### Liste zur README.bootparams
     https://gitlab.archlinux.org/archlinux/mkinitcpio/mkinitcpio-archiso/-/blob/master/docs/README.bootparams
 
