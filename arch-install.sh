@@ -1625,11 +1625,11 @@ if [ "${nvidia}" == "y" ]; then
 fi
 
 if [ "${amd}" == "amd" ]; then
-    arch-chroot ${mountpoint} pacman -Sy lib32-amdvlk amdvlk opencl-mesa lib32-opencl-mesa --needed --noconfirm
+    arch-chroot ${mountpoint} pacman -Sy mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau vulkan-tools --needed --noconfirm
     # https://wiki.archlinux.org/title/Vulkan#Selecting_Vulkan_driver
     echo "VK_ICD_FILENAMES=\"/usr/share/vulkan/icd.d/amd_icd64.json\"" >> ${mountpoint}/etc/environment
 elif [ "${amd}" == "deck" ]; then
-    arch-chroot ${mountpoint} pacman -Sy lib32-amdvlk amdvlk opencl-mesa lib32-opencl-mesa --needed --noconfirm
+    arch-chroot ${mountpoint} pacman -Sy mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau vulkan-tools libretro --needed --noconfirm
     # https://wiki.archlinux.org/title/Vulkan#Selecting_Vulkan_driver
     echo "AMD_VULKAN_ICD=RADV" >> ${mountpoint}/etc/environment
     cp -v /opt/${repo}/steam-deck/xorg.conf.d/* ${mountpoint}/etc/X11/xorg.conf.d/
