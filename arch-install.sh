@@ -679,6 +679,11 @@ function installation {
     fi
 
     #hostname
+    hostname=SpectreOS
+    if [ "${amd}" == "deck" ]; then
+        hostname="${hostname}-deck"
+    fi
+
     echo "${hostname}" > ${mountpoint}/etc/hostname
     echo "hostname=\"${hostname}\"" > /etc/conf.d/hostname
 
@@ -1215,7 +1220,6 @@ function abfrage() {
             echo "You can choose with an online installation, which distrubtion you want to install!!!"
 
         fi
-        hostname=spectreos
 
         echo "WARNING!!! Diese Methode ist wegen einer neuen UDEV Rule unnötig geworden der alle angeschlossen Laufwerke automatisch mountet ;-)"
         read -p "Should you an disk added to your fstab? : [y/udevautomountrule/N] " autodisk
