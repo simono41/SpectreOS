@@ -685,7 +685,7 @@ function installation {
     fi
 
     echo "${hostname}" > ${mountpoint}/etc/hostname
-    echo "hostname=\"${hostname}\"" > /etc/conf.d/hostname
+    echo "hostname=\"${hostname}\"" > ${mountpoint}/etc/conf.d/hostname
 
     # os-release
     cp /opt/${repo}/os-release ${mountpoint}/etc/
