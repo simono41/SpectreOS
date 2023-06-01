@@ -1248,7 +1248,7 @@ function abfrage() {
         [[ -z "${nvidia}" ]] && nvidia=n
 
         if lspci | grep -e VGA -e 3D -m 1 | grep AMD; then
-            read -p "Have you a AMD Graphic-Card or a Steam Deck? : [amd/steam/N] " amd
+            read -p "Have you a AMD Graphic-Card or a Steam Deck? : [amd/deck/N] " amd
         fi
         [[ -z "${amd}" ]] && amd=n
 
@@ -1624,10 +1624,16 @@ if [ "${amd}" == "amd" ]; then
     arch-chroot ${mountpoint} pacman -Sy lib32-amdvlk amdvlk opencl-mesa lib32-opencl-mesa --needed --noconfirm
     # https://wiki.archlinux.org/title/Vulkan#Selecting_Vulkan_driver
     echo "VK_ICD_FILENAMES=\"/usr/share/vulkan/icd.d/amd_icd64.json\"" >> ${mountpoint}/etc/environment
-elif [ "${amd}" == "steam" ]; then
+elif [ "${amd}" == "deck" ]; then
     arch-chroot ${mountpoint} pacman -Sy lib32-amdvlk amdvlk opencl-mesa lib32-opencl-mesa --needed --noconfirm
     # https://wiki.archlinux.org/title/Vulkan#Selecting_Vulkan_driver
     echo "AMD_VULKAN_ICD=RADV" >> ${mountpoint}/etc/environment
+    cp -v /opt/${repo}/steam-deck/xorg.conf.d/* ${mountpoint}/etc/X11/xorg.conf.d/
+
+    # An open-source Linux userspace driver for Valves Steam Deck hardware.
+    # https://open-sd.gitlab.io/opensd-docs/opensd-docs/latest/users_manual/run>
+    arch-chroot ${mountpoint} su "${user}" -c "aurinstaller opensd-git"
+    arch-chroot ${mountpoint} su "${user}" -c "systemctl --user enable opensd"
 fi
 
 if [ "${multicard}" == "y" ]; then
