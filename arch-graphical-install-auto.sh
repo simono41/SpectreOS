@@ -663,6 +663,12 @@ fi
 # Systemd Service (zum testen)
 #systemctl enable displaylink
 
+
+# An open-source Linux userspace driver for Valves Steam Deck hardware.
+# https://open-sd.gitlab.io/opensd-docs/opensd-docs/latest/users_manual/running.html
+#aurinstaller opensd-git
+#systemctl --user enable opensd
+
 # MS-Fonts
 mkdir -p /etc/fonts/conf.avail/
 cp /opt/${repo}/configs/20-no-embedded.conf /etc/fonts/conf.avail/
