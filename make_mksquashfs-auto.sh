@@ -13,7 +13,7 @@ fi
 # Parameter:
 # Entfernt die Datenträger die noch gemounted sind: umount
 # Mountet die Datenträger: mount
-# 
+#
 # Packete die installiert sein muessen:
 # arch-install-scripts
 # xorriso
@@ -65,58 +65,64 @@ function mount_chroot() {
 function system() {
 
     pacman -Sy arch-install-scripts squashfs-tools dosfstools libisoburn --needed --noconfirm
-    
+
     if [ "${makesystem}" == "y" ]; then
         mkdir -p ${work_dir}/${arch}/airootfs
         cp -v mirrorlist* /etc/pacman.d/
         pacstrap -c -G -C pacman.conf -M ${work_dir}/${arch}/airootfs $(cat packages.txt)
     fi
-    
+
     if [ "${mkinitcpio}" == "y" ]; then
         # module and hooks
-        
+
         # hooks
         cp -v configs/install/* ${work_dir}/${arch}/airootfs/usr/lib/initcpio/install/
         cp -v configs/hooks/* ${work_dir}/${arch}/airootfs/usr/lib/initcpio/hooks/
         cp -v configs/script-hooks/* ${work_dir}/${arch}/airootfs/usr/lib/initcpio/
-        
+
         mkdir -p ${work_dir}/${arch}/airootfs/etc/pacman.d/hooks
         cp -v configs/pacman-hooks/* ${work_dir}/${arch}/airootfs/etc/pacman.d/hooks/
         cp -v pacman.conf ${work_dir}/${arch}/airootfs/etc/pacman.conf
         cp -v mirrorlist* ${work_dir}/${arch}/airootfs/etc/pacman.d/
         chmod 644 -R ${work_dir}/${arch}/airootfs/etc/pacman.d/mirrorlist*
-        
+
         # modprobe.d
         mkdir -p ${work_dir}/${arch}/airootfs/etc/modprobe.d/
         echo "blacklist floppy" > ${work_dir}/${arch}/airootfs/etc/modprobe.d/blacklist-floppy.conf
         echo "blacklist nouveau" > ${work_dir}/${arch}/airootfs/etc/modprobe.d/blacklist_nouveau.conf
         echo "install dell-smbios /bin/false" > ${work_dir}/${arch}/airootfs/etc/modprobe.d/blacklist-dell-smbios.conf
-        
+
         # modules
         echo "MODULES=\"amdgpu i915 nouveau fuse loop\"" > ${work_dir}/${arch}/airootfs/etc/mkinitcpio.conf
         echo "HOOKS=\"base udev keyboard keymap consolefont modconf archiso block filesystems\"" >> ${work_dir}/${arch}/airootfs/etc/mkinitcpio.conf
         echo "COMPRESSION=\"zstd\"" >> ${work_dir}/${arch}/airootfs/etc/mkinitcpio.conf
+
+        #hostname
+        hostname=SpectreOS
+
+        echo "${hostname}" > ${work_dir}/${arch}/airootfs/etc/hostname
+        echo "hostname=\"${hostname}\"" > ${work_dir}/${arch}/airootfs/etc/conf.d/hostname
     fi
 }
 
 function IMAGE() {
-    
+
     if [ "$image" != "n" ]
     then
-        
+
         echo "Unmounte System"
         sleep 2
         umount_chroot
 
         echo "System wird gereinigt und komprimiert!!!"
         sleep 5
-        
+
         mkdir -p ${work_dir}/iso/${install_dir}/${arch}/airootfs/
-        
+
         if [ -f ${work_dir}/${arch}/airootfs/pkglist.txt ]; then
             cp ${work_dir}/${arch}/airootfs/pkglist.txt ${work_dir}/iso/${install_dir}/${arch}/
         fi
-        
+
         if [ -f ${work_dir}/iso/${install_dir}/${arch}/airootfs.sfs ]
         then
             echo "${work_dir}/iso/${install_dir}/${arch}/airootfs.sfs wird neu angelegt!!!"
@@ -124,68 +130,68 @@ function IMAGE() {
         else
             echo "airootfs.sfs nicht vorhanden!"
         fi
-        
+
         mksquashfs ${work_dir}/${arch}/airootfs ${work_dir}/iso/${install_dir}/${arch}/airootfs.sfs -comp zstd
-        
+
         mkdir -p tmp/
         sha512sum ${work_dir}/iso/${install_dir}/${arch}/airootfs.sfs > tmp/airootfs.sha512
         echo "$(cat tmp/airootfs.sha512 | awk -F ' ' '{print $1}') /run/archiso/bootmnt/${install_dir}/${arch}/airootfs.sfs" > ${work_dir}/iso/${install_dir}/${arch}/airootfs.sha512
-        
+
     else
         echo "Image wird nicht neu aufgebaut!!!"
     fi
-    
+
 }
 
 function copykernel() {
-    
+
     mkdir -p ${work_dir}/iso/boot
     mkdir -p ${work_dir}/iso/${install_dir}/boot/${arch}/
     cp ${work_dir}/${arch}/airootfs/boot/initramfs-linux.img ${work_dir}/iso/${install_dir}/boot/${arch}/archiso.img
     cp ${work_dir}/${arch}/airootfs/boot/vmlinuz-linux ${work_dir}/iso/${install_dir}/boot/${arch}/vmlinuz
     cp ${work_dir}/iso/${install_dir}/boot/${arch}/archiso.img ${work_dir}/iso/boot/initramfs-${arch}.img
     cp ${work_dir}/iso/${install_dir}/boot/${arch}/vmlinuz ${work_dir}/iso/boot/vmlinuz-${arch}
-    
+
 }
 
 function UEFI() {
-    
+
     mkdir -p ${work_dir}/iso/boot
     mkdir -p ${work_dir}/iso/${install_dir}/boot/${arch}
-    
+
     mkdir -p ${work_dir}/iso/boot/
     mkdir -p ${work_dir}/iso/EFI/boot/
-    
+
     mkdir -p ${work_dir}/iso/boot/grub/
-    
+
     mkdir -p ${work_dir}/iso/EFI/archiso
     mkdir -p ${work_dir}/iso/EFI/boot
     mkdir -p ${work_dir}/iso/loader/entries
-    
-    
+
+
     if [ "$efi" != "n" ]
     then
-        
+
         if [ -f ${work_dir}/iso/EFI/archiso/efiboot.img ]
         then
             rm ${work_dir}/iso/EFI/archiso/efiboot.img
         else
             echo "efiboot.img nicht vorhanden!"
         fi
-        
+
         truncate -s 4M ${work_dir}/iso/EFI/archiso/efiboot.img
         mkfs.vfat -n ${iso_label_short}_EFI ${work_dir}/iso/EFI/archiso/efiboot.img
-        
+
         copykernel
-        
+
         mkdir -p ${work_dir}/efiboot
-        
+
         mount -t vfat -o loop ${work_dir}/iso/EFI/archiso/efiboot.img ${work_dir}/efiboot
-        
+
         mkdir -p ${work_dir}/efiboot/EFI/boot/
-        
+
         cp -v grub-config/cfg/*.cfg ${work_dir}/iso/boot/grub/
-        
+
         mkdir -p ${work_dir}/iso/boot/grub/themes
         cp -Rv grub-config/themes/Stylish/ ${work_dir}/iso/boot/grub/themes/
         cp grub-config/unicode.pf2 ${work_dir}/iso/boot/grub/
@@ -203,7 +209,7 @@ function UEFI() {
 
         cp -Rv /usr/lib/grub/x86_64-efi ${work_dir}/efiboot/EFI/boot/
         grub-mkimage -d ${work_dir}/iso/boot/grub/x86_64-efi -o ${work_dir}/efiboot/EFI/boot/bootx64.efi -O x86_64-efi -p /boot/grub iso9660
-        
+
         cp ${work_dir}/${arch}/airootfs/boot/memtest86+/memtest.bin ${work_dir}/iso/boot/memtest
         cp ${work_dir}/${arch}/airootfs/usr/share/licenses/common/GPL2/license.txt ${work_dir}/iso/boot/memtest.COPYING
         cp ${work_dir}/${arch}/airootfs/boot/memtest86+/memtest.bin ${work_dir}/iso/EFI/boot/memtest
@@ -218,18 +224,18 @@ function UEFI() {
         sed -e 's|def_netinstall=.*$|def_netinstall=\"no\"|' -i ${work_dir}/iso/boot/grub/defaults.cfg
         sed -e 's|def_autostartdesktop=.*$|def_autostartdesktop=\"sway\"|' -i ${work_dir}/iso/boot/grub/defaults.cfg
         sed -e 's|def_copytoram=.*$|def_copytoram=\"n\"|' -i ${work_dir}/iso/boot/grub/defaults.cfg
-        
+
         ###
-        
+
         sleep 5
-        
+
         if [ "$trennen" != "n" ]
         then
             umount -d ${work_dir}/efiboot
         fi
-        
+
     fi
-    
+
 }
 
 function makegrubiso() {
@@ -256,7 +262,7 @@ function makegrubiso() {
         -no-emul-boot -iso-level 3 \
         -o "${out_dir}/${imagename}" \
         "${work_dir}/iso/"
-    
+
 }
 
 
@@ -271,15 +277,15 @@ if [ "${filesystem}" == "y" ]; then
     # Falls das benötigte Packet nicht enthalten ist, installiere es erneut
     mount_chroot
     chroot ${work_dir}/${arch}/airootfs /usr/bin/arch-graphical-install-auto archisoinstall
-    
+
 fi
 
 if [ "${makeimage}" == "y" ]; then
-    
+
     # System-image
-    
+
     IMAGE
-    
+
 fi
 
 if [ "${umount}" == "y" ]; then
@@ -291,29 +297,29 @@ if [ "${mount}" == "y" ]; then
 fi
 
 if [ "${makebios}" == "y" ]; then
-    
+
     copykernel
-    
+
     UEFI
-    
+
 fi
 
 if [ "${makeiso}" == "y" ]; then
     # MAKEISO
     if [ "$image" != "n" ]
     then
-        
+
         imagename=arch-${iso_name}-${iso_version}-${arch}.iso
-        
+
         if [ "$run" != "n" ]
         then
             if [ -f ${out_dir}/${imagename} ]
             then
                 rm ${out_dir}/${imagename}
             fi
-            
+
             makegrubiso
-            
+
         fi
     fi
 fi
