@@ -692,8 +692,11 @@ userrechte
 
 # grub-updater
 if [ -d /etc/grub.d ]; then
-    cp /opt/${repo}/configs/grub.d/10_linux /etc/grub.d/10_linux
+    cp -v /opt/${repo}/configs/grub.d/* /etc/grub.d/
 fi
+cp /opt/${repo}/scripts/extract-menuentry.py /usr/bin/extract-menuentry.py
+cp /opt/${repo}/scripts/extract-menuentry-snapshots.py /usr/bin/extract-menuentry-snapshots.py
+
 mkdir -p /boot/grub/
 grub-mkconfig -o /boot/grub/grub.cfg
 

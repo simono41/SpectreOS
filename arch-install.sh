@@ -780,15 +780,24 @@ function grubinstall() {
         parameter="${parameter}cryptkey=UUID=${usbkeyuuid}:${usbkeydateisystem}:\/archkey "
     fi
 
+    sed -i '/GRUB_CMDLINE_LINUX=/d' ${mountpoint}/etc/default/grub
+    echo "GRUB_CMDLINE_LINUX=\"${parameter}\"" >> ${mountpoint}/etc/default/grub
+
     [[ -z "${autostartdesktop}" ]] && autostartdesktop=sway
     [[ -z "${lang}" ]] && lang=de_DE
     [[ -z "${keytable}" ]] && keytable=de
     [[ -z "${tz}" ]] && tz=Europe/Berlin
 
-    parameter="${parameter}autostartdesktop=${autostartdesktop} lang=${lang} keytable=${keytable} tz=${tz} "
+    parameter="lang=${lang} keytable=${keytable} tz=${tz} autostartdesktop=sway "
 
-    sed -i '/GRUB_CMDLINE_LINUX=/d' ${mountpoint}/etc/default/grub
-    echo "GRUB_CMDLINE_LINUX=\"${parameter}\"" >> ${mountpoint}/etc/default/grub
+    sed -i '/GRUB_CMDLINE_LINUX_DEFAULT=/d' ${mountpoint}/etc/default/grub
+    echo "GRUB_CMDLINE_LINUX_DEFAULT=\"${parameter}\"" >> ${mountpoint}/etc/default/grub
+
+    parameter="lang=${lang} keytable=${keytable} tz=${tz} autostartdesktop=i3 "
+
+    sed -i '/GRUB_CMDLINE_LINUX_DEFAULT_ALT=/d' ${mountpoint}/etc/default/grub
+    echo "GRUB_CMDLINE_LINUX_DEFAULT_ALT=\"${parameter}\"" >> ${mountpoint}/etc/default/grub
+
     echo "GRUB_DISABLE_OS_PROBER=true" >> ${mountpoint}/etc/default/grub
 }
 
@@ -1243,7 +1252,7 @@ function abfrage() {
         read -p "Should you autologin in youre System? : [Y/n] " autologin
         [[ -z "${autologin}" ]] && autologin=y
 
-        read -p "Should you start Sway (default) or I3? : [SWAY/I3] " autostartdesktop
+        read -p "Should you start Sway (default) or I3 (this can selected by the last load GRUB Entry)? : [SWAY/I3] " autostartdesktop
         [[ -z "${autostartdesktop}" ]] && autostartdesktop=sway
 
         if lspci | grep -e VGA -e 3D -m 1 | grep NVIDIA; then

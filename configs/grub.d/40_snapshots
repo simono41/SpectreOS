@@ -1,0 +1,23 @@
+#!/bin/sh
+. /etc/default/grub
+export GRUB_DISABLE_RECOVERY=true
+export GRUB_DISABLE_SUBMENU=y
+export GRUB_CMDLINE_LINUX_DEFAULT=$GRUB_CMDLINE_LINUX_DEFAULT_ALT
+
+if [ -f "/etc/grub-snapshot" ]; then
+  if [ "$(cat /etc/grub-snapshot | wc -l)" != 0 ]; then
+    # TRANSLATORS: %s is replaced with an OS name
+    echo "submenu 'Snapshot options for SpectreOS' \$menuentry_id_option 'gnulinux-snapshot-$boot_device_id' {"
+    is_top_level=false
+    snapshotanzahl="$(expr $(wc -l /etc/grub-snapshot | awk '{print $1}') + 1)"
+    while (( "$(expr $snapshotanzahl - 1)" )); do
+      snapshotanzahl=`expr ${snapshotanzahl} - 1`
+      SNAPSHOTNAME="$(cat /etc/grub-snapshot | sed ''$snapshotanzahl'!d')"
+      SNAPSHOT="rootflags=subvol=${SNAPSHOTNAME}"
+
+      export GRUB_CMDLINE_LINUX="${SNAPSHOT} ${GRUB_CMDLINE_LINUX#* }"
+      /etc/grub.d/10_linux | python /usr/bin/extract-menuentry-snapshots.py ${SNAPSHOT#*@}
+    done
+    echo '}'
+  fi
+fi
