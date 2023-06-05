@@ -731,21 +731,12 @@ function grubinstall() {
     fi
     [[ -z "${aufloesung}" ]] && aufloesung=auto
 
-    cp /opt/${repo}/configs/grub.d/10_linux ${mountpoint}/etc/grub.d/10_linux
-
     mkdir -p ${mountpoint}/boot/grub/themes/
     #cp -Rv /opt/${repo}/grub-config/themes/poly-light/ ${mountpoint}/boot/grub/themes/
     cp -Rv /opt/${repo}/grub-config/themes/Stylish/ ${mountpoint}/boot/grub/themes/
     cp -Rv /opt/${repo}/grub-config/themes/Vimix/ ${mountpoint}/boot/grub/themes/
     sed -i 's|GRUB_DISTRIBUTOR=.*$|GRUB_DISTRIBUTOR=\"'$repo'\"|' ${mountpoint}/etc/default/grub
     sed -i 's|GRUB_PRELOAD_MODULES=.*$|GRUB_PRELOAD_MODULES=\"part_gpt part_msdos zstd btrfs lvm\"|' ${mountpoint}/etc/default/grub
-
-    if [ "${verschluesselung}" == "y" ] || [ "y" == "${lvmsupport}" ]; then
-        sed -i 's|GRUB_CMDLINE_LINUX_DEFAULT=.*$|GRUB_CMDLINE_LINUX_DEFAULT=\"\"|' ${mountpoint}/etc/default/grub
-    else
-        sed -i 's|GRUB_CMDLINE_LINUX_DEFAULT=.*$|GRUB_CMDLINE_LINUX_DEFAULT=\"\"|' ${mountpoint}/etc/default/grub
-    fi
-
     #sed -i 's|GRUB_BACKGROUND=.*$|GRUB_BACKGROUND=\"\/usr\/share\/grub\/background.png\"|' ${mountpoint}/etc/default/grub
     #sed -i 's|GRUB_THEME=.*$|GRUB_THEME="\/boot\/grub\/themes\/poly-light\/theme.txt"|' ${mountpoint}/etc/default/grub
     sed -i 's|#GRUB_THEME=.*$|GRUB_THEME="\/boot\/grub\/themes\/Stylish\/theme.txt"|' ${mountpoint}/etc/default/grub
@@ -799,6 +790,7 @@ function grubinstall() {
     echo "GRUB_CMDLINE_LINUX_DEFAULT_ALT=\"${parameter}\"" >> ${mountpoint}/etc/default/grub
 
     echo "GRUB_DISABLE_OS_PROBER=true" >> ${mountpoint}/etc/default/grub
+    echo "GRUB_SAVEDEFAULT=true" >> ${mountpoint}/etc/default/grub
 }
 
 function btrfsformat() {

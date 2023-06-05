@@ -21,7 +21,7 @@ def extract_menuentry(infile):
       if line.startswith(menuentry_start):
         in_menuentry = True
         match = re.search(r"menuentry '[^']+' (.*)", line)
-        print("menuentry '%s' %s" % (os.environ.get('GRUB_ALT_NAME', 'SpectreOS Linux alt'), match.group(1)))
+        print("menuentry '%s' %s" % (os.environ.get('GRUB_ALT_NAME', 'SpectreOS Linux alt (i3)'), match.group(1)))
         pass
       pass
     pass
