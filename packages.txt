@@ -24,6 +24,7 @@ code
 cups
 cups hplip
 dhcpcd intel-ucode amd-ucode iwd lvm2
+discord flatpak
 docker docker-compose
 emacs
 filezilla
