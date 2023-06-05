@@ -1638,7 +1638,7 @@ elif [ "${amd}" == "deck" ]; then
     # An open-source Linux userspace driver for Valves Steam Deck hardware.
     # https://open-sd.gitlab.io/opensd-docs/opensd-docs/latest/users_manual/run>
     arch-chroot ${mountpoint} su "${user}" -c "aurinstaller opensd-git"
-    arch-chroot ${mountpoint} su "${user}" -c "systemctl --user enable opensd"
+    #arch-chroot ${mountpoint} su "${user}" -c "systemctl --user enable opensd"
 fi
 
 if [ "${multicard}" == "y" ]; then
