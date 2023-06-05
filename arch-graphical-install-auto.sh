@@ -472,7 +472,7 @@ cp /opt/${repo}/polkit/50-org.freedesktop.NetworkManager.rules /etc/polkit-1/rul
 cp /opt/${repo}/os-release /etc/
 
 # lsb-release
-cp /opt/${repo}/lsb-release /etc/
+#cp /opt/${repo}/lsb-release /etc/
 
 # autodiskmount
 mkdir -p /media/
