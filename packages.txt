@@ -79,7 +79,7 @@ gamescope steam nvtop
 libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau libvdpau-va-gl
 libwacom xf86-input-wacom
 man man-pages man-pages-de
-mesa-utils egl-wayland wofi mako mpv fuzzel bemenu-wayland wayvnc xdg-desktop-portal-wlr slurp grim jq
+mesa-utils egl-wayland wofi mako mpv fuzzel bemenu-wayland bemenu-x11 bemenu-ncurses j4-dmenu-desktop wayvnc xdg-desktop-portal-wlr slurp grim jq
 mosh mitmproxy net-tools bind traceroute mtr hydra aircrack-ng
 nano vim vim-spell-de
 network-manager-applet
