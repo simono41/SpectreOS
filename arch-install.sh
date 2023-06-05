@@ -745,6 +745,9 @@ function grubinstall() {
     #sed -i 's|#GRUB_BACKGROUND=.*$|GRUB_BACKGROUND=\"\/usr\/share\/grub\/background.png\"|' ${mountpoint}/etc/default/grub
     #sed -i 's|#GRUB_THEME=.*$|GRUB_THEME="\/boot\/grub\/themes\/poly-light\/theme.txt"|' ${mountpoint}/etc/default/grub
     sed -i 's|GRUB_GFXMODE=.*$|GRUB_GFXMODE="'$aufloesung'"|' ${mountpoint}/etc/default/grub
+    sed -i 's|GRUB_DEFAULT=.*$|GRUB_DEFAULT=\"saved\"|' ${mountpoint}/etc/default/grub
+    sed -i 's|GRUB_SAVEDEFAULT=.*$|GRUB_SAVEDEFAULT=\"true\"|' ${mountpoint}/etc/default/grub
+    sed -i 's|#GRUB_SAVEDEFAULT=.*$|GRUB_SAVEDEFAULT=\"true\"|' ${mountpoint}/etc/default/grub
 
     if [ "y" == "${lvmsupport}" ]; then
         cryptdevicesystem="${devicelvmname}"
@@ -790,7 +793,6 @@ function grubinstall() {
     echo "GRUB_CMDLINE_LINUX_DEFAULT_ALT=\"${parameter}\"" >> ${mountpoint}/etc/default/grub
 
     echo "GRUB_DISABLE_OS_PROBER=true" >> ${mountpoint}/etc/default/grub
-    echo "GRUB_SAVEDEFAULT=true" >> ${mountpoint}/etc/default/grub
 }
 
 function btrfsformat() {
