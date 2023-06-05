@@ -82,7 +82,6 @@ man man-pages man-pages-de
 mesa-utils egl-wayland wofi mako mpv fuzzel bemenu-wayland wayvnc xdg-desktop-portal-wlr slurp grim jq
 mosh mitmproxy net-tools bind traceroute mtr hydra aircrack-ng
 nano vim vim-spell-de
-nautilus
 network-manager-applet
 networkmanager
 networkmanager-fortisslvpn
