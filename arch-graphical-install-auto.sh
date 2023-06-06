@@ -355,6 +355,7 @@ systemctl enable NetworkManager.service
 systemctl enable bluetooth.service
 #systemctl enable httpd
 #systemctl enable sddm
+systemctl enable seatd
 
 #add_plymouth
 
