@@ -1636,6 +1636,7 @@ elif [ "${amd}" == "deck" ]; then
     # https://wiki.archlinux.org/title/Vulkan#Selecting_Vulkan_driver
     echo "AMD_VULKAN_ICD=RADV" >> ${mountpoint}/etc/environment
     cp -v /opt/${repo}/steam-deck/xorg.conf.d/* ${mountpoint}/etc/X11/xorg.conf.d/
+    cp -v /opt/${repo}/steam-deck/NetworkManager/conf.d/default-wifi-powersave-on.conf ${mountpoint}/etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
 
     # An open-source Linux userspace driver for Valves Steam Deck hardware.
     # https://open-sd.gitlab.io/opensd-docs/opensd-docs/latest/users_manual/run>
