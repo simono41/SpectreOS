@@ -129,6 +129,10 @@ system-config-printer
 thunderbird thunderbird-i18n-de thunderbird-dark-reader
 vdirsyncer khal
 tmux
+texstudio texlab texinfo texi2html tex-gyre-fonts texlive-bibtexextra texlive-fontsextra texlive-langchinese texlive-langjapanese texlive-music texlive-science
+texi2html texlive-bin texlive-formatsextra texlive-langcyrillic texlive-langkorean texlive-pictures texmaker
+texinfo texlive-core texlive-games texlive-langextra texlive-latexextra texlive-pstricks texstudio
+texlab texlive-doc texlive-humanities texlive-langgreek texlive-meta texlive-publishers texworks
 ttc-iosevka
 ttf-bitstream-vera
 ttf-carlito
