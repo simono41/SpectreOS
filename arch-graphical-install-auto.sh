@@ -104,7 +104,7 @@ function standartinstallation() {
 function addusers() {
     # Erstelle Gruppen
     groupid=1000
-    for wort in ${user} users wheel audio input power storage video sys optical adm lp scanner sddm kvm fuse autologin network wireshark docker libvirt libvirtdbus flatpak; do
+    for wort in ${user} users wheel audio input power storage video sys optical adm lp scanner sddm kvm fuse autologin network wireshark docker libvirt libvirtdbus flatpak seat; do
         if ! cat /etc/group | grep ${wort}; then
             while cat /etc/group | grep ${groupid}; do
                 groupid=$((${groupid} + 1))
@@ -118,7 +118,7 @@ function addusers() {
         useruid=$((${useruid} + 1))
     done
 
-    useradd -m -g ${user} -G users,wheel,audio,input,power,storage,video,sys,optical,adm,lp,scanner,sddm,kvm,fuse,autologin,network,wireshark,docker,libvirt,libvirtdbus,flatpak -s /usr/bin/zsh --uid ${useruid} ${user}
+    useradd -m -g ${user} -G users,wheel,audio,input,power,storage,video,sys,optical,adm,lp,scanner,sddm,kvm,fuse,autologin,network,wireshark,docker,libvirt,libvirtdbus,flatpak,seat -s /usr/bin/zsh --uid ${useruid} ${user}
     echo "${user}:${userpass}" | chpasswd
     mkdir -p /home/${user}/
     userrechte
