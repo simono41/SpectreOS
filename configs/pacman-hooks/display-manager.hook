@@ -1,9 +1,0 @@
-[Trigger]
-Operation = Upgrade
-Type = Package
-Target = sddm
-
-[Action]
-Description = Updating sddm display-manager config after updating
-When = PostTransaction
-Exec = /bin/bash -c "cp /tmp/sddm.conf /etc/sddm.conf && cp /tmp/sddm.conf /usr/lib/sddm/sddm.conf.d/default.conf && cp /opt/deadc0de-os-code/display-manager.service /etc/systemd/system/display-manager.service"
