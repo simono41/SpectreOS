@@ -648,6 +648,9 @@ aurinstaller obs-backgroundremoval
 # QT5 Styleplugins (Default GTK Arc-Dark Theme)
 aurinstaller qt5-styleplugins
 
+# QT6 Styleplugins (Default GTK Arc-Dark Theme)
+aurinstaller qt6gtk2
+
 # Passwortmanager for dmenu (i3)
 aurinstaller passdmenu
 
@@ -686,6 +689,9 @@ gsettings set org.gnome.desktop.interface cursor-theme capitaine-cursors
 gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
 gsettings set org.gnome.desktop.interface icon-theme Papirus-Dark
 gsettings set org.gnome.desktop.wm.preferences theme "Arc-Dark"
+gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+gsettings set org.gnome.desktop.default-applications.terminal exec wezterm
+gsettings set org.gnome.desktop.default-applications.terminal exec-arg start
 
 gtk-update-icon-cache
 

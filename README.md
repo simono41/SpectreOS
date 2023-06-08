@@ -40,6 +40,9 @@
     gsettings set org.gnome.desktop.interface gtk-theme Arc-Dark
     gsettings set org.gnome.desktop.interface icon-theme Arc
     gsettings set org.gnome.desktop.wm.preferences theme "Arc-Dark"
+    gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'
+    gsettings set org.gnome.desktop.default-applications.terminal exec wezterm
+    gsettings set org.gnome.desktop.default-applications.terminal exec-arg start
 
 ### Um das xdg-desktop-portal-gnome nicht mehr zu starten
     systemctl --user mask xdg-desktop-portal-gnome.service
