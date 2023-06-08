@@ -1,0 +1,6 @@
+#!/bin/sh
+. /etc/default/grub
+export GRUB_DISABLE_RECOVERY=true
+export GRUB_DISABLE_SUBMENU=y
+export GRUB_CMDLINE_LINUX_DEFAULT=$(echo $(echo ${GRUB_CMDLINE_LINUX_DEFAULT_ALT} | sed -e 's/autostartdesktop=.*$//') autostartdesktop=steamos)
+/etc/grub.d/10_linux | python /usr/bin/extract-menuentry.py "alternative desktop environment for Steam Deck (steamos-session)"

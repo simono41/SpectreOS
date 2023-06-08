@@ -16,7 +16,7 @@ if [ -f "/etc/grub-snapshot" ]; then
       SNAPSHOT="rootflags=subvol=${SNAPSHOTNAME}"
 
       export GRUB_CMDLINE_LINUX="${SNAPSHOT} ${GRUB_CMDLINE_LINUX#* }"
-      /etc/grub.d/10_linux | python /usr/bin/extract-menuentry-snapshots.py ${SNAPSHOT#*@}
+      /etc/grub.d/10_linux | python /usr/bin/extract-menuentry.py "Snapshot ${SNAPSHOT#*@}"
     done
     echo '}'
   fi

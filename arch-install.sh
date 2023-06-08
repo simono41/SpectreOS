@@ -1637,11 +1637,14 @@ elif [ "${amd}" == "deck" ]; then
     echo "AMD_VULKAN_ICD=RADV" >> ${mountpoint}/etc/environment
     cp -v /opt/${repo}/steam-deck/xorg.conf.d/* ${mountpoint}/etc/X11/xorg.conf.d/
     cp -v /opt/${repo}/steam-deck/NetworkManager/conf.d/default-wifi-powersave-on.conf ${mountpoint}/etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
+    cp -v /opt/${repo}/steam-deck/grub.d/* ${mountpoint}/etc/grub.d/
 
     # An open-source Linux userspace driver for Valves Steam Deck hardware.
     # https://open-sd.gitlab.io/opensd-docs/opensd-docs/latest/users_manual/run>
     arch-chroot ${mountpoint} su "${user}" -c "aurinstaller opensd-git"
+    arch-chroot ${mountpoint} su "${user}" -c "aurinstaller steamos-compositor-plus"
     #arch-chroot ${mountpoint} su "${user}" -c "systemctl --user enable opensd"
+    arch-chroot ${mountpoint} grub-mkconfig -o ${mountpoint}/boot/grub/grub.cfg
 fi
 
 if [ "${multicard}" == "y" ]; then
