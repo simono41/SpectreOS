@@ -356,6 +356,8 @@ systemctl enable bluetooth.service
 #systemctl enable httpd
 #systemctl enable sddm
 systemctl enable seatd
+# https://wiki.archlinux.org/title/CPU_frequency_scaling
+systemctl enable power-profiles-daemon
 
 #add_plymouth
 
