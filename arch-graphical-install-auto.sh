@@ -628,6 +628,9 @@ aurinstaller wob
 aurinstaller wlogout
 aurinstaller wcp
 
+# SwayNotificationCenter
+aurinstaller swaync
+
 # on-screen keyboard (start with wvkbd-mobintl)
 aurinstaller wvkbd
 # and for x11
