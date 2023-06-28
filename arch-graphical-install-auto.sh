@@ -704,7 +704,6 @@ if [ -d /etc/grub.d ]; then
     cp -v /opt/${repo}/configs/grub.d/* /etc/grub.d/
 fi
 cp /opt/${repo}/scripts/extract-menuentry.py /usr/bin/extract-menuentry.py
-cp /opt/${repo}/scripts/extract-menuentry-snapshots.py /usr/bin/extract-menuentry-snapshots.py
 
 mkdir -p /boot/grub/
 grub-mkconfig -o /boot/grub/grub.cfg
