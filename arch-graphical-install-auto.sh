@@ -527,9 +527,6 @@ cp -v /opt/${repo}/configs/pacman-hooks/* /etc/pacman.d/hooks/
 cp -v /opt/${repo}/make-packages-txt.sh /usr/bin/make-packages-txt.sh
 chmod +x /usr/bin/make-packages-txt.sh
 
-pacmanversion="pacman.conf"
-sed 's|%VERSION%|'$pacmanversion'|' -i /etc/pacman.d/hooks/pacmanconf.hook
-
 # nano
 echo "include "/usr/share/nano/*.nanorc"" > /etc/nanorc
 
