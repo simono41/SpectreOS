@@ -58,6 +58,7 @@ function gitclone() {
     git config --global user.name "user"
     git config --global push.default simple
     git config --global pull.rebase true
+    git config --global merge.tool vimdiff
     git config --global --add safe.directory '*'
 
     # Aktualisiere die Repositiories

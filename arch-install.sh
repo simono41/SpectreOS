@@ -4,7 +4,6 @@ set -ex
 
 clear
 
-git config --global credential.helper store
 arch=$(uname -m)
 branch=master
 repo=SpectreOS
@@ -83,6 +82,7 @@ function gitclone() {
     git config --global user.name "user"
     git config --global push.default simple
     git config --global pull.rebase true
+    git config --global merge.tool vimdiff
     if [ -d "/opt/${repo}" ]; then
         echo "${repo} existiert bereits!!!"
         cd /opt/${repo}
