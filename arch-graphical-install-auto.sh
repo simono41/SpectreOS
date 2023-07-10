@@ -657,6 +657,9 @@ aurinstaller qt6gtk2
 # Passwortmanager for dmenu (i3)
 aurinstaller passdmenu
 
+# Joplin Desktop for Linux, using the system Electron package
+aurinstaller joplin-electron
+
 # background temparature
 aurinstaller wl-gammarelay-rs
 if [ "${archisoinstall}" == "y" ]; then
