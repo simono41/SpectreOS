@@ -51,7 +51,7 @@ polkit polkit-gnome
 python python-atspi python-jeepney python-pyxdg
 qemu-hw-display-qxl qemu-system-x86
 qt5-wayland qt5ct qt6ct lxde-gtk3 lxqt imv evince qtpass qtcurve-qt5 qtcurve-gtk2 qt6-wayland
-remmina libvncserver spice-gtk freerdp gtk-vnc element-desktop trash-cli
+remmina libvncserver spice-gtk freerdp gtk-vnc trash-cli
 screen tmux sudo
 sway swaybg swayidle swaylock wl-clipboard wireplumber waybar wayland-protocols wf-recorder grim slurp
 vdirsyncer khal syncthing
