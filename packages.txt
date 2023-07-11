@@ -126,7 +126,6 @@ sudo
 sway swaybg swayidle swaylock wl-clipboard wireplumber waybar wayland-protocols wf-recorder
 syncthing
 system-config-printer
-thunderbird thunderbird-i18n-de thunderbird-dark-reader
 vdirsyncer khal
 tmux
 texstudio texlab texinfo texi2html tex-gyre-fonts texlive-bibtexextra texlive-fontsextra texlive-langchinese texlive-langjapanese texlive-music texlive-mathscience
