@@ -9,28 +9,22 @@ arch-install-scripts squashfs-tools dosfstools libisoburn grub efibootmgr dosfst
 archlinux-xdg-menu
 at-spi2-core
 base base-devel linux linux-firmware
-bashtop
-blueman
-bluez
-bluez-utils
+blueman bluez bluez-utils
 breeze-icons oxygen-icons
 brightnessctl
 btrfs-progs ntfs-3g exfatprogs
 capitaine-cursors
 chezmoi
-chromium browserpass-chromium
+chromium browserpass browserpass-chromium
 cmake gradle
 code
-cups
-cups hplip
+cups hplip system-config-printer
+curl wget
 dhcpcd intel-ucode amd-ucode iwd lvm2
 flatpak
 docker docker-compose
-emacs
 filezilla
-browserpass
 qutebrowser ranger fff nnn lf xterm
-fish
 foot
 gammastep
 gimp
@@ -38,8 +32,6 @@ git
 gnome-system-monitor
 gnupg
 gparted
-grim
-grim
 gst-libav
 gst-plugin-gtk
 gst-plugin-pipewire
@@ -58,7 +50,7 @@ gvfs-gphoto2
 gvfs-mtp
 gvfs-nfs
 gvfs-smb
-htop
+htop bashtop
 i3-wm i3status-rust rust i3blocks i3lock arandr rofi dunst feh scrot xtrlock clipmenu pinentry pinentry-bemenu
 iwd
 jre-openjdk
@@ -73,7 +65,6 @@ lib32-vulkan-mesa-layers
 lib32-vulkan-radeon
 lib32-vulkan-validation-layers
 libheif
-libreoffice-fresh
 libva-intel-driver intel-media-driver org.freedesktop.secrets gnome-keyring
 lib32-amdvlk amdvlk opencl-mesa lib32-opencl-mesa glad python-glfw qt6-shadertools vkd3d lib32-vkd3d vkmark vulkan-extra-layers vulkan-extra-tools vulkan-swrast vulkan-validation-layers vulkan-virtio lib32-vulkan-swrast lib32-vulkan-virtio
 gamescope steam nvtop modemmanager modemmanager-qt modem-manager-gui usb_modeswitch power-profiles-daemon
@@ -96,20 +87,13 @@ noto-fonts-extra
 openscad prusa-slicer slicer-udev
 opus-tools vorbis-tools flac ffmpeg
 otf-font-awesome
-pamixer
 pango papirus-icon-theme pass pass-otp
-pavucontrol pamixer wget
-pdfmod
-pipewire
-pipewire-alsa
-pipewire-jack
-pipewire-pulse
-pipewire-v4l2
+pavucontrol pamixer
+pipewire pipewire-alsa pipewire-jack pipewire-pulse pipewire-v4l2
 pixz pigz zstd xz
 pkg-config gcc
 pkgfile
-polkit
-polkit-gnome
+polkit polkit-gnome
 python
 python-atspi
 python-jeepney
@@ -120,14 +104,13 @@ qt5-wayland
 qt5ct qt6ct lxde-gtk3 lxqt imv evince qtpass qtcurve-qt5 qtcurve-gtk2
 qt6-wayland
 remmina libvncserver spice-gtk freerdp gtk-vnc element-desktop trash-cli
+screen tmux
 slurp
 starship
 sudo
-sway swaybg swayidle swaylock wl-clipboard wireplumber waybar wayland-protocols wf-recorder
+sway swaybg swayidle swaylock wl-clipboard wireplumber waybar wayland-protocols wf-recorder grim
 syncthing
-system-config-printer
 vdirsyncer khal
-tmux
 texstudio texlab texinfo texi2html tex-gyre-fonts texlive-bibtexextra texlive-fontsextra texlive-langchinese texlive-langjapanese texlive-music texlive-mathscience
 texi2html texlive-bin texlive-formatsextra texlive-langcyrillic texlive-langkorean texlive-pictures texmaker
 texinfo texlive-basic texlive-games texlive-langother texlive-latexextra texlive-pstricks texstudio
@@ -168,12 +151,9 @@ wireguard-tools
 wofi
 wpa_supplicant
 xarchiver
-xdg-desktop-portal-gtk
-xdg-desktop-portal-wlr
-xdg-user-dirs
-xdg-user-dirs-gtk
-xorg-server xorg-xinit xorg-drivers
-xorg-xwayland
-xournalpp libreoffice libreoffice-fresh-de
+xdg-desktop-portal-gtk xdg-desktop-portal-wlr
+xdg-user-dirs xdg-user-dirs-gtk
+xorg-server xorg-xinit xorg-drivers xorg-xwayland
+xournalpp pdfslicer libreoffice-fresh libreoffice-fresh-de
 yt-dlp python-mutagen
 zsh zsh-autosuggestions zsh-completions zsh-history-substring-search zsh-lovers zsh-syntax-highlighting fzf
