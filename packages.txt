@@ -17,7 +17,6 @@ capitaine-cursors
 chezmoi
 chromium browserpass browserpass-chromium
 cmake gradle
-code
 cups hplip system-config-printer
 curl wget
 dhcpcd intel-ucode amd-ucode iwd lvm2
