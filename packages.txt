@@ -1,69 +1,29 @@
-acpid dbus avahi ntp fail2ban alsa-utils alsa-tools bash-completion
+acpid dbus avahi ntp fail2ban alsa-utils alsa-tools bash-completion at-spi2-core
 adapta-gtk-theme
-adwaita-qt5
-adwaita-qt6
-arc-gtk-theme
-arc-icon-theme
-arc-solid-gtk-theme
+adwaita-qt5 adwaita-qt6
+arc-gtk-theme arc-icon-theme arc-solid-gtk-theme
 arch-install-scripts squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie memtest86+
 archlinux-xdg-menu
-at-spi2-core
 base base-devel linux linux-firmware
 blueman bluez bluez-utils
 breeze-icons oxygen-icons
-brightnessctl
 btrfs-progs ntfs-3g exfatprogs
 capitaine-cursors
-chezmoi
 chromium browserpass browserpass-chromium
-cmake gradle
 cups hplip system-config-printer
 curl wget
 dhcpcd intel-ucode amd-ucode iwd lvm2
-flatpak
 docker docker-compose
-filezilla
-qutebrowser ranger fff nnn lf xterm
-foot
-gammastep
-gimp
-git
+qutebrowser ranger fff nnn lf xterm foot
 gnome-system-monitor
-gnupg
-gparted
-gst-libav
-gst-plugin-gtk
-gst-plugin-pipewire
-gst-plugins-bad
-gst-plugins-bad-libs
-gst-plugins-base
-gst-plugins-base-libs
-gst-plugins-good
-gst-plugins-ugly
-gstreamer
-gvfs
-gvfs-afc
-gvfs-goa
-gvfs-google
-gvfs-gphoto2
-gvfs-mtp
-gvfs-nfs
-gvfs-smb
+gnupg git flatpak cmake gradle chezmoi
+gst-libav gst-plugin-gtk gst-plugin-pipewire gst-plugins-bad gst-plugins-bad-libs gst-plugins-base gst-plugins-base-libs gst-plugins-good gst-plugins-ugly gstreamer
+gvfs gvfs-afc gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb
 htop bashtop
-i3-wm i3status-rust rust i3blocks i3lock arandr rofi dunst feh scrot xtrlock clipmenu pinentry pinentry-bemenu
-iwd
+i3-wm i3status-rust rust i3blocks i3lock arandr rofi dunst feh scrot xtrlock clipmenu pinentry pinentry-bemenu gammastep brightnessctl
 jre-openjdk
-keychain
-lib32-at-spi2-core
-lib32-pipewire
-lib32-pipewire-jack
-lib32-pipewire-v4l2
-lib32-vulkan-icd-loader
-lib32-vulkan-intel
-lib32-vulkan-mesa-layers
-lib32-vulkan-radeon
-lib32-vulkan-validation-layers
-libheif
+lib32-at-spi2-core lib32-pipewire lib32-pipewire-jack lib32-pipewire-v4l2 lib32-vulkan-icd-loader
+lib32-vulkan-intel lib32-vulkan-mesa-layers lib32-vulkan-radeon lib32-vulkan-validation-layers
 libva-intel-driver intel-media-driver org.freedesktop.secrets gnome-keyring
 lib32-amdvlk amdvlk opencl-mesa lib32-opencl-mesa glad python-glfw qt6-shadertools vkd3d lib32-vkd3d vkmark vulkan-extra-layers vulkan-extra-tools vulkan-swrast vulkan-validation-layers vulkan-virtio lib32-vulkan-swrast lib32-vulkan-virtio
 gamescope steam nvtop modemmanager modemmanager-qt modem-manager-gui usb_modeswitch power-profiles-daemon
@@ -74,78 +34,39 @@ mesa-utils egl-wayland wofi mako mpv fuzzel bemenu-wayland bemenu-x11 bemenu-ncu
 mosh mitmproxy net-tools bind traceroute mtr hydra aircrack-ng
 nano vim vim-spell-de
 network-manager-applet
-networkmanager
-networkmanager-fortisslvpn
-networkmanager-openvpn
-networkmanager-qt
+networkmanager networkmanager-fortisslvpn networkmanager-openvpn networkmanager-qt iwd
 nginx certbot-nginx
 nm-connection-editor
-noto-fonts
-noto-fonts-emoji
-noto-fonts-extra
+noto-fonts noto-fonts-emoji noto-fonts-extra
 openscad prusa-slicer slicer-udev
 opus-tools vorbis-tools flac ffmpeg
+openssh keychain
 otf-font-awesome
 pango papirus-icon-theme pass pass-otp
 pavucontrol pamixer
 pipewire pipewire-alsa pipewire-jack pipewire-pulse pipewire-v4l2
 pixz pigz zstd xz
-pkg-config gcc
-pkgfile
+pkg-config gcc pkgfile
 polkit polkit-gnome
-python
-python-atspi
-python-jeepney
-python-pyxdg
-qemu-hw-display-qxl
-qemu-system-x86
-qt5-wayland
-qt5ct qt6ct lxde-gtk3 lxqt imv evince qtpass qtcurve-qt5 qtcurve-gtk2
-qt6-wayland
+python python-atspi python-jeepney python-pyxdg
+qemu-hw-display-qxl qemu-system-x86
+qt5-wayland qt5ct qt6ct lxde-gtk3 lxqt imv evince qtpass qtcurve-qt5 qtcurve-gtk2 qt6-wayland
 remmina libvncserver spice-gtk freerdp gtk-vnc element-desktop trash-cli
-screen tmux
-slurp
-starship
-sudo
-sway swaybg swayidle swaylock wl-clipboard wireplumber waybar wayland-protocols wf-recorder grim
-syncthing
-vdirsyncer khal
+screen tmux sudo
+sway swaybg swayidle swaylock wl-clipboard wireplumber waybar wayland-protocols wf-recorder grim slurp
+vdirsyncer khal syncthing
 texstudio texlab texinfo texi2html tex-gyre-fonts texlive-bibtexextra texlive-fontsextra texlive-langchinese texlive-langjapanese texlive-music texlive-mathscience
 texi2html texlive-bin texlive-formatsextra texlive-langcyrillic texlive-langkorean texlive-pictures texmaker
 texinfo texlive-basic texlive-games texlive-langother texlive-latexextra texlive-pstricks texstudio
 texlab texlive-humanities texlive-langgreek texlive-meta texlive-publishers texworks
-ttc-iosevka
-ttf-bitstream-vera
-ttf-carlito
-ttf-dejavu
-ttf-fantasque-sans-mono
-ttf-fira-code
-ttf-fira-mono
-ttf-fira-sans
-ttf-font-awesome
-ttf-hack
-ttf-hack-nerd
-ttf-jetbrains-mono
-ttf-liberation
-ttf-meslo-nerd
-ttf-nerd-fonts-symbols
-ttf-nerd-fonts-symbols-common
-ttf-nerd-fonts-symbols-mono
-ttf-opensans
-ttf-terminus-nerd terminus-font
+ttc-iosevka ttf-bitstream-vera ttf-carlito ttf-dejavu ttf-fantasque-sans-mono ttf-fira-code ttf-fira-mono ttf-fira-sans
+ttf-font-awesome ttf-hack ttf-hack-nerd ttf-jetbrains-mono ttf-liberation ttf-meslo-nerd ttf-nerd-fonts-symbols
+ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols-mono ttf-opensans ttf-terminus-nerd terminus-font
 v4l2loopback-dkms v4l2loopback-utils v4l-utils linux-headers obs-studio python opencv python-opencv clang flatbuffers python-flatbuffers
-vlc
-vulkan-headers
-vulkan-icd-loader
-vulkan-intel
-vulkan-mesa-layers
-vulkan-radeon
-vulkan-tools
-wezterm
-wine
-wine-gecko
-wine-mono
-winetricks
+vlc gimp inkscape libheif filezilla gparted
+vulkan-headers vulkan-icd-loader vulkan-intel vulkan-mesa-layers vulkan-radeon vulkan-tools
+wezterm starship
+wine wine-gecko wine-mono winetricks
 wireguard-tools
 wofi
 wpa_supplicant
