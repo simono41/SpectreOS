@@ -667,6 +667,10 @@ if [ "${archisoinstall}" == "y" ]; then
     rm -R /home/${user}/aur-builds/wl-gammarelay-rs
 fi
 
+# SwayFX: Sway, but with eye candy!
+pacman -Rss sway --noconfirm
+aurinstaller swayfx
+
 # thinkpad docking station Ultra
 #aurinstaller evdi-git
 #aurinstaller displaylink
