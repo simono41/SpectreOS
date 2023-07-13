@@ -737,6 +737,8 @@ if [ "${archisoinstall}" == "y" ]; then
 
     links
 
+    rm -Rv /home/${user}/aur-builds
+
     pacman -Qq > /pkglist.txt
     if [ $(ls /var/cache/pacman/pkg | wc -w) -gt 0 ]; then
         rm -R /var/cache/pacman/pkg/*

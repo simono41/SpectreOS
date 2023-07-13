@@ -11,11 +11,9 @@ fi
 
 echo "Durchsuche auf neue Packete indem fremde Packete angezeigt werden!!!"
 
-# for-schleife
+# for-schleife für verwaiste Packete vom AUR
 for wort in $(pacman -Qmq)
 do
     echo "$wort"
-    if [ -d "/home/${user}/aur-builds/${wort}" ];then
-        /usr/bin/aurinstaller ${wort}
-    fi
+    /usr/bin/aurinstaller ${wort}
 done
