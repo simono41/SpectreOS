@@ -668,7 +668,9 @@ if [ "${archisoinstall}" == "y" ]; then
 fi
 
 # SwayFX: Sway, but with eye candy!
-pacman -Rss sway --noconfirm
+if pacman -Rss sway --noconfirm; then
+  echo "Sway erfolgreich entfernt um SwayFX zu installieren :)"
+fi
 aurinstaller swayfx
 
 # thinkpad docking station Ultra
