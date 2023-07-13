@@ -646,7 +646,7 @@ aurinstaller vmp
 aurinstaller clipman
 
 # OBS-Backgroundremover
-aurinstaller obs-backgroundremoval
+aurinstaller obs-backgroundremoval-git
 
 # QT5 Styleplugins (Default GTK Arc-Dark Theme)
 aurinstaller qt5-styleplugins
