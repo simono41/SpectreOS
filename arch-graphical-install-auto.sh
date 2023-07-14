@@ -610,7 +610,8 @@ su ${user} -l -c "chezmoi update -v --force"
 #aurinstaller jetbrains-toolbox
 
 # Minecraft-launcher
-aurinstaller polymc-bin
+#aurinstaller polymc-bin
+aurinstaller polymc-qt5-bin
 
 # bash beautifier
 aurinstaller beautysh
