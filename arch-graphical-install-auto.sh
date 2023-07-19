@@ -301,16 +301,6 @@ echo "%wheel ALL=(ALL) NOPASSWD: ALL" >> $SUDOERS
 
 standartinstallation
 
-# Your commands
-
-# startup
-cp /opt/${repo}/scripts/startup-script.sh /usr/bin/startup-script
-chmod 755 /usr/bin/startup-script
-
-cp /opt/${repo}/service/startup-script.service /etc/systemd/system/
-chmod 644 /etc/systemd/system/startup-script.service
-systemctl enable startup-script.service
-
 echo "Packetliste2 Ende"
 echo "Beginne mit dem Konfigurieren des Systems :D"
 
