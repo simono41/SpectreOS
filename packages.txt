@@ -25,7 +25,7 @@ jre-openjdk
 lib32-at-spi2-core lib32-pipewire lib32-pipewire-jack lib32-pipewire-v4l2 lib32-vulkan-icd-loader
 lib32-vulkan-intel lib32-vulkan-mesa-layers lib32-vulkan-radeon lib32-vulkan-validation-layers
 libva-intel-driver intel-media-driver org.freedesktop.secrets gnome-keyring
-lib32-amdvlk amdvlk opencl-mesa lib32-opencl-mesa glad python-glfw qt6-shadertools vkd3d lib32-vkd3d vkmark vulkan-extra-layers vulkan-extra-tools vulkan-swrast vulkan-validation-layers vulkan-virtio lib32-vulkan-swrast lib32-vulkan-virtio
+lib32-amdvlk amdvlk opencl-mesa lib32-opencl-mesa glad python-glfw glfw-wayland lib32-sdl sdl2_gfx qt6-shadertools vkd3d lib32-vkd3d vkmark vulkan-extra-layers vulkan-extra-tools vulkan-swrast vulkan-validation-layers vulkan-virtio lib32-vulkan-swrast lib32-vulkan-virtio
 gamescope steam nvtop modemmanager modemmanager-qt modem-manager-gui usb_modeswitch power-profiles-daemon
 libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau libvdpau-va-gl
 libwacom xf86-input-wacom
