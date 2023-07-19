@@ -215,9 +215,7 @@ function add_locale_settings() {
 
     echo "de_DE.UTF-8 UTF-8" > /etc/locale.gen
     echo "de_DE ISO-8859-1" >> /etc/locale.gen
-    if ! grep 'en_US.UTF-8 UTF-8' /etc/locale.gen 1>/dev/null 2>&1; then
-        echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
-    fi
+    echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 
     locale-gen
 
