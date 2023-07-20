@@ -655,6 +655,9 @@ if pacman -Rss sway --noconfirm; then
 fi
 aurinstaller swayfx
 
+# Miracast implementation for GNOME and I3
+aurinstaller gnome-network-displays
+
 # thinkpad docking station Ultra
 #aurinstaller evdi-git
 #aurinstaller displaylink

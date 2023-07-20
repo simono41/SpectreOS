@@ -19,7 +19,7 @@ gnome-system-monitor
 gnupg git flatpak cmake ninja gradle chezmoi
 gst-libav gst-plugin-gtk gst-plugin-pipewire gst-plugins-bad gst-plugins-bad-libs gst-plugins-base gst-plugins-base-libs gst-plugins-good gst-plugins-ugly gstreamer
 gvfs gvfs-afc gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb
-htop bashtop btop
+htop bashtop btop asciiquarium lolcat
 i3-wm i3status-rust rust i3blocks i3lock arandr rofi dunst feh scrot xtrlock clipmenu pinentry pinentry-bemenu gammastep brightnessctl
 jre-openjdk
 lib32-at-spi2-core lib32-pipewire lib32-pipewire-jack lib32-pipewire-v4l2 lib32-vulkan-icd-loader
