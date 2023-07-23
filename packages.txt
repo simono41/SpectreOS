@@ -16,7 +16,7 @@ dhcpcd intel-ucode amd-ucode iwd lvm2
 docker docker-compose
 qutebrowser ranger fff nnn lf xterm foot
 gnome-system-monitor
-gnupg git flatpak cmake ninja gradle chezmoi
+gnupg git flatpak nix cmake ninja gradle chezmoi
 gst-libav gst-plugin-gtk gst-plugin-pipewire gst-plugins-bad gst-plugins-bad-libs gst-plugins-base gst-plugins-base-libs gst-plugins-good gst-plugins-ugly gstreamer
 gvfs gvfs-afc gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb
 htop bashtop btop asciiquarium lolcat
