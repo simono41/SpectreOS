@@ -1638,7 +1638,6 @@ elif [ "${amd}" == "deck" ]; then
     cp -v /opt/${repo}/steam-deck/xorg.conf.d/* ${mountpoint}/etc/X11/xorg.conf.d/
     cp -v /opt/${repo}/steam-deck/NetworkManager/conf.d/default-wifi-powersave-on.conf ${mountpoint}/etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
     sed -i 's|GRUB_GFXMODE=.*$|GRUB_GFXMODE="1280x800"|' ${mountpoint}/etc/default/grub
-    arch-chroot ${mountpoint} grub-mkconfig -o ${mountpoint}/boot/grub/grub.cfg
 
     # An open-source Linux userspace driver for Valves Steam Deck hardware.
     # https://open-sd.gitlab.io/opensd-docs/opensd-docs/latest/users_manual/run>

@@ -22,8 +22,10 @@ gvfs gvfs-afc gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb
 htop bashtop btop asciiquarium lolcat
 i3-wm i3status-rust rust i3blocks i3lock arandr rofi dunst feh scrot xtrlock clipmenu pinentry pinentry-bemenu gammastep brightnessctl
 jre-openjdk
+mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau vulkan-tools libretro
 lib32-at-spi2-core lib32-pipewire lib32-pipewire-jack lib32-pipewire-v4l2 lib32-vulkan-icd-loader
 lib32-vulkan-intel lib32-vulkan-mesa-layers lib32-vulkan-radeon lib32-vulkan-validation-layers
+vulkan-headers vulkan-icd-loader vulkan-intel vulkan-mesa-layers vulkan-radeon vulkan-tools
 libva-intel-driver intel-media-driver org.freedesktop.secrets gnome-keyring
 lib32-amdvlk amdvlk opencl-clover-mesa opencl-rusticl-mesa glad python-glfw glfw-wayland lib32-sdl sdl2_gfx qt6-shadertools vkd3d lib32-vkd3d vkmark vulkan-extra-layers vulkan-extra-tools vulkan-swrast vulkan-validation-layers vulkan-virtio lib32-vulkan-swrast lib32-vulkan-virtio
 gamescope steam nvtop modemmanager modemmanager-qt modem-manager-gui usb_modeswitch power-profiles-daemon
@@ -64,7 +66,6 @@ ttf-font-awesome ttf-hack ttf-hack-nerd ttf-jetbrains-mono ttf-liberation ttf-me
 ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols-mono ttf-opensans ttf-terminus-nerd terminus-font
 v4l2loopback-dkms v4l2loopback-utils v4l-utils linux-headers obs-studio python opencv python-opencv clang flatbuffers python-flatbuffers
 vlc gimp inkscape libheif filezilla gparted code
-vulkan-headers vulkan-icd-loader vulkan-intel vulkan-mesa-layers vulkan-radeon vulkan-tools
 wezterm starship
 wine wine-gecko wine-mono winetricks
 wireguard-tools
