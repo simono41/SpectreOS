@@ -323,11 +323,10 @@ systemctl enable ntpd
 systemctl enable avahi-daemon
 systemctl enable cups
 systemctl enable sshd
-systemctl disable systemd-random-seed.service
 systemctl enable cronie
 systemctl enable systemd-timesyncd.service
-systemctl disable docker
-systemctl disable x11vnc
+# systemctl disable docker
+# systemctl disable x11vnc
 #systemctl enable mpd
 #systemctl enable syncthing@simono41.service
 echo "Bitte OpenVPN config in die /etc/openvpn/client/client.conf kopieren!!!"
