@@ -9,7 +9,7 @@ blueman bluez bluez-utils
 breeze-icons oxygen-icons
 btrfs-progs ntfs-3g exfatprogs
 capitaine-cursors
-chromium browserpass browserpass-chromium
+chromium browserpass browserpass-chromium firefox firefox-i18n-de firefox-ublock-origin firefox-dark-reader browserpass-firefox speech-dispatcher thunderbird thunderbird-dark-reader thunderbird-i18n-de
 cups hplip system-config-printer
 curl wget
 dhcpcd intel-ucode amd-ucode iwd lvm2
