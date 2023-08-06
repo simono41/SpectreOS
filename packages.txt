@@ -19,7 +19,7 @@ gnome-system-monitor
 gnupg git flatpak nix cmake ninja gradle chezmoi
 gst-libav gst-plugin-gtk gst-plugin-pipewire gst-plugins-bad gst-plugins-bad-libs gst-plugins-base gst-plugins-base-libs gst-plugins-good gst-plugins-ugly gstreamer
 gvfs gvfs-afc gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb
-htop bashtop btop asciiquarium lolcat
+htop bashtop btop ctop asciiquarium lolcat
 i3-wm i3status-rust rust i3blocks i3lock arandr rofi dunst feh scrot xtrlock clipmenu pinentry pinentry-bemenu gammastep brightnessctl
 jre-openjdk
 mesa lib32-mesa vulkan-radeon lib32-vulkan-radeon libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau vulkan-tools libretro
