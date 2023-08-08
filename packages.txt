@@ -6,7 +6,7 @@ arch-install-scripts squashfs-tools dosfstools libisoburn grub efibootmgr dosfst
 archlinux-xdg-menu
 base base-devel linux linux-firmware
 blueman bluez bluez-utils
-borg python-llfuse opensmtpd
+borg python-llfuse opensmtpd s-nail mailutils
 breeze-icons oxygen-icons
 btrfs-progs ntfs-3g exfatprogs
 capitaine-cursors
