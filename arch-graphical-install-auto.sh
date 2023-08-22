@@ -659,7 +659,7 @@ aurinstaller swayfx
 aurinstaller gnome-network-displays
 
 # Command to simulate input anywhere (X11, Wayland, TTYs)
-#aurinstaller dotool
+aurinstaller dotool
 
 # thinkpad docking station Ultra
 #aurinstaller evdi-git
