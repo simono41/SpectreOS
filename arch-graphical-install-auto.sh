@@ -658,6 +658,9 @@ aurinstaller swayfx
 # Miracast implementation for GNOME and I3
 aurinstaller gnome-network-displays
 
+# Command to simulate input anywhere (X11, Wayland, TTYs)
+aurinstaller dotool
+
 # thinkpad docking station Ultra
 #aurinstaller evdi-git
 #aurinstaller displaylink
