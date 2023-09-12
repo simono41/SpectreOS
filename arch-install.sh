@@ -455,7 +455,7 @@ function usbsecret() {
 function cron() {
     echo "cron-job snapshot"
     mkdir -p ${mountpoint}/var/spool/cron/
-    echo -n "0 18 * * * /usr/bin/snapshot make var/cache/pacman/pkg opt home " > ${mountpoint}/var/spool/cron/root
+    echo -n "0 18 * * * /usr/bin/snapshot make var/lib/docker opt home " > ${mountpoint}/var/spool/cron/root
 
     # custom-mounts
     for wort in ${mountsnaps}
