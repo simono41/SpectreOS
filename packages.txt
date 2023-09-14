@@ -68,7 +68,7 @@ v4l2loopback-dkms v4l2loopback-utils v4l-utils linux-headers obs-studio python o
 vlc gimp inkscape libheif filezilla gparted code
 wezterm starship
 wine wine-gecko wine-mono winetricks
-wireguard-tools
+wireguard-tools openfortivpn
 wofi
 wpa_supplicant
 xarchiver

@@ -673,6 +673,9 @@ aurinstaller dotool
 #aurinstaller opensd-git
 #systemctl --user enable opensd
 
+# systemd-resolved is a systemd service that provides network name resolution to local applications via a D-Bus interface
+systemctl enable systemd-resolved.service
+
 # MS-Fonts
 mkdir -p /etc/fonts/conf.avail/
 cp /opt/${repo}/configs/20-no-embedded.conf /etc/fonts/conf.avail/
