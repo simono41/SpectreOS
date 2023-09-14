@@ -55,3 +55,6 @@
 
 ### Hier ein Script zum vollautomatisiertem starten mit QEMU
     https://gitlab.archlinux.org/archlinux/archiso/-/blob/master/scripts/run_archiso.sh
+
+### Zum starten einer openfortivpn verbindung bitte folgenden Befehl ausführen
+    sudo openfortivpn --pppd-accept-remote
