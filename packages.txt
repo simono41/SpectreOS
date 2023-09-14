@@ -40,6 +40,7 @@ networkmanager networkmanager-openvpn networkmanager-qt iwd
 nginx certbot-nginx
 nm-connection-editor
 noto-fonts noto-fonts-emoji noto-fonts-extra
+npm yarn
 openscad prusa-slicer slicer-udev
 opus-tools vorbis-tools flac ffmpeg
 openssh keychain
