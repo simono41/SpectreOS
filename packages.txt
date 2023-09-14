@@ -1,6 +1,5 @@
 acpid dbus avahi ntp fail2ban alsa-utils alsa-tools bash-completion at-spi2-core
 adapta-gtk-theme
-adwaita-qt5 adwaita-qt6
 arc-gtk-theme arc-icon-theme arc-solid-gtk-theme
 arch-install-scripts squashfs-tools dosfstools libisoburn grub efibootmgr dosfstools gptfdisk cronie memtest86+
 archlinux-xdg-menu
@@ -37,7 +36,7 @@ mesa-utils egl-wayland wofi mako mpv fuzzel bemenu-wayland bemenu-x11 bemenu-ncu
 mosh mitmproxy net-tools bind traceroute mtr hydra aircrack-ng
 nano vim vim-spell-de
 network-manager-applet
-networkmanager networkmanager-fortisslvpn networkmanager-openvpn networkmanager-qt iwd
+networkmanager networkmanager-openvpn networkmanager-qt iwd
 nginx certbot-nginx
 nm-connection-editor
 noto-fonts noto-fonts-emoji noto-fonts-extra
