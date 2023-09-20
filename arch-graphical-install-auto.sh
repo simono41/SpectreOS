@@ -660,6 +660,9 @@ aurinstaller gnome-network-displays
 
 # Command to simulate input anywhere (X11, Wayland, TTYs)
 aurinstaller dotool
+# voice control for handsfree computing
+#aurinstaller vosk-api-bin
+#aurinstaller numen
 
 # Offline Speech to Text for Desktop Linux
 aurinstaller python-vosk-bin
@@ -670,12 +673,16 @@ echo '## Give ydotoold access to the uinput device
 KERNEL=="uinput", GROUP="input", MODE="0660", OPTIONS+="static_node=uinput"
 ' > /etc/udev/rules.d/80-uinput.rules
 
+wget https://alphacephei.com/vosk/models/vosk-model-small-de-0.15.zip
+unzip vosk-model-small-de-0.15.zip
+mkdir -p /home/${user}/.config/nerd-dictation/
+mv vosk-model-small-de-0.15 /home/${user}/.config/nerd-dictation/model
+
 # thinkpad docking station Ultra
 #aurinstaller evdi-git
 #aurinstaller displaylink
 # Systemd Service (zum testen)
 #systemctl enable displaylink
-
 
 # An open-source Linux userspace driver for Valves Steam Deck hardware.
 # https://open-sd.gitlab.io/opensd-docs/opensd-docs/latest/users_manual/running.html
