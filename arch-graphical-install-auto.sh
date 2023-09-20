@@ -673,10 +673,12 @@ echo '## Give ydotoold access to the uinput device
 KERNEL=="uinput", GROUP="input", MODE="0660", OPTIONS+="static_node=uinput"
 ' > /etc/udev/rules.d/80-uinput.rules
 
-wget https://alphacephei.com/vosk/models/vosk-model-small-de-0.15.zip
-unzip vosk-model-small-de-0.15.zip
-mkdir -p /home/${user}/.config/nerd-dictation/
-mv vosk-model-small-de-0.15 /home/${user}/.config/nerd-dictation/model
+if ! [ -d /home/${user}/.config/nerd-dictation/model ]; then
+  wget https://alphacephei.com/vosk/models/vosk-model-small-de-0.15.zip
+  unzip vosk-model-small-de-0.15.zip
+  mkdir -p /home/${user}/.config/nerd-dictation/
+  mv vosk-model-small-de-0.15 /home/${user}/.config/nerd-dictation/model
+fi
 
 # thinkpad docking station Ultra
 #aurinstaller evdi-git
