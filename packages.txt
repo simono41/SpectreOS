@@ -51,7 +51,7 @@ pipewire pipewire-alsa pipewire-jack pipewire-pulse pipewire-v4l2
 pixz pigz zstd xz
 pkg-config gcc pkgfile
 polkit polkit-gnome
-python python-atspi python-jeepney python-pyxdg go
+python python-pipx python-atspi python-jeepney python-pyxdg go
 qemu-hw-display-qxl qemu-system-x86
 qt5-wayland qt5ct qt6ct lxde-gtk3 lxqt imv evince qtpass qtcurve-qt5 qtcurve-gtk2 qt6-wayland
 remmina libvncserver spice-gtk freerdp gtk-vnc trash-cli xdg-utils

@@ -661,6 +661,10 @@ aurinstaller gnome-network-displays
 # Command to simulate input anywhere (X11, Wayland, TTYs)
 aurinstaller dotool
 
+# Offline Speech to Text for Desktop Linux
+aurinstaller python-vosk-bin
+aurinstaller nerd-dictation-git
+
 # thinkpad docking station Ultra
 #aurinstaller evdi-git
 #aurinstaller displaylink
