@@ -52,7 +52,7 @@ pixz pigz zstd xz
 pkg-config gcc pkgfile
 polkit polkit-gnome
 python python-pipx python-atspi python-jeepney python-pyxdg go
-qemu-hw-display-qxl qemu-system-x86
+qemu-full qemu-hw-display-qxl qemu-system-x86 qemu-img
 qt5-wayland qt5ct qt6ct lxde-gtk3 lxqt imv evince qtpass qtcurve-qt5 qtcurve-gtk2 qt6-wayland
 remmina libvncserver spice-gtk freerdp gtk-vnc trash-cli xdg-utils
 screen tmux sudo
