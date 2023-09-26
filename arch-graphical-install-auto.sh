@@ -4,7 +4,7 @@ set -ex
 
 if [[ $EUID -ne 0 ]]; then
     echo "This script must be run as root" 1>&2
-    sudo "$@"
+    sudo "${0}" "$@"
     exit 0
 fi
 echo "Als root Angemeldet"
