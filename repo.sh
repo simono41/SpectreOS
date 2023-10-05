@@ -2,8 +2,8 @@
 set -ex
 
 ENVLOCAL="/etc/environment"
-export WEBADDRESS_OS="https://git.brothertec.eu/simono41/SpectreOS.git"
-export WEBADDRESS_SCRIPTE="https://git.brothertec.eu/simono41/shell-scripte-code.git"
+export WEBADDRESS_OS="https://code.brothertec.eu/simono41/SpectreOS.git"
+export WEBADDRESS_SCRIPTE="https://code.brothertec.eu/simono41/shell-scripte-code.git"
 
 if grep 'WEBADDRESS_OS' $ENVLOCAL; then
    sed -i 's|WEBADDRESS_OS=.*|WEBADDRESS_OS='$WEBADDRESS_OS'|' $ENVLOCAL

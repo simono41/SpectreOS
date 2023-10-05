@@ -16,7 +16,7 @@ dhcpcd intel-ucode amd-ucode iwd lvm2
 docker docker-compose
 qutebrowser ranger fff nnn lf xterm foot
 gnome-system-monitor
-gnupg git flatpak nix cmake ninja gradle chezmoi
+gnupg git nix cmake ninja gradle chezmoi
 gst-libav gst-plugin-gtk gst-plugin-pipewire gst-plugins-bad gst-plugins-bad-libs gst-plugins-base gst-plugins-base-libs gst-plugins-good gst-plugins-ugly gstreamer
 gvfs gvfs-afc gvfs-goa gvfs-google gvfs-gphoto2 gvfs-mtp gvfs-nfs gvfs-smb
 htop bashtop btop ctop asciiquarium lolcat
@@ -28,7 +28,7 @@ lib32-vulkan-intel lib32-vulkan-mesa-layers lib32-vulkan-radeon lib32-vulkan-val
 vulkan-headers vulkan-icd-loader vulkan-intel vulkan-mesa-layers vulkan-radeon vulkan-tools
 libva-intel-driver intel-media-driver org.freedesktop.secrets gnome-keyring
 lib32-amdvlk amdvlk opencl-clover-mesa opencl-rusticl-mesa glad python-glfw glfw-wayland lib32-sdl sdl2_gfx qt6-shadertools vkd3d lib32-vkd3d vkmark vulkan-extra-layers vulkan-extra-tools vulkan-swrast vulkan-validation-layers vulkan-virtio lib32-vulkan-swrast lib32-vulkan-virtio
-gamescope steam nvtop modemmanager modemmanager-qt modem-manager-gui usb_modeswitch power-profiles-daemon
+gamescope steam nvtop modemmanager modemmanager-qt5 modem-manager-gui usb_modeswitch power-profiles-daemon
 libva-mesa-driver lib32-libva-mesa-driver mesa-vdpau lib32-mesa-vdpau libvdpau-va-gl
 libwacom xf86-input-wacom
 man man-pages man-pages-de
@@ -36,7 +36,7 @@ mesa-utils egl-wayland wofi mako mpv fuzzel bemenu-wayland bemenu-x11 bemenu-ncu
 mosh mitmproxy net-tools bind traceroute mtr hydra aircrack-ng
 nano vim vim-spell-de
 network-manager-applet
-networkmanager networkmanager-openvpn networkmanager-qt iwd
+networkmanager networkmanager-openvpn networkmanager-qt5 iwd
 nginx certbot-nginx
 nm-connection-editor
 noto-fonts noto-fonts-emoji noto-fonts-extra
