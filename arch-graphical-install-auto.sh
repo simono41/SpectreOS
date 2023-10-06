@@ -325,6 +325,10 @@ systemctl enable cups
 systemctl enable sshd
 systemctl enable cronie
 systemctl enable systemd-timesyncd.service
+
+# systemd-resolved is a systemd service that provides network name resolution to local applications via a D-Bus interface
+systemctl enable systemd-resolved.service
+
 # systemctl disable docker
 # systemctl disable x11vnc
 #systemctl enable mpd
@@ -690,9 +694,6 @@ fi
 # https://open-sd.gitlab.io/opensd-docs/opensd-docs/latest/users_manual/running.html
 #aurinstaller opensd-git
 #systemctl --user enable opensd
-
-# systemd-resolved is a systemd service that provides network name resolution to local applications via a D-Bus interface
-systemctl enable systemd-resolved.service
 
 # MS-Fonts
 mkdir -p /etc/fonts/conf.avail/
