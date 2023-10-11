@@ -387,6 +387,10 @@ if ! grep 'EDITOR' /etc/environment; then
     echo "EDITOR=vim" >> /etc/environment
 fi
 
+if ! grep 'QT_QPA_PLATFORMTHEME' /etc/environment; then
+    echo "QT_QPA_PLATFORMTHEME=qt6ct" >> /etc/environment
+fi
+
 # /etc/arch-release
 echo "OS=${repo}" > /etc/arch-release
 
