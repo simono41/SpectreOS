@@ -7,6 +7,10 @@
 ### ROM bauen
     ./make_mksquashfs-auto.sh makesystem mkinitcpio filesystem makeimage makebios makeiso
 
+### Falls man Virt-Manager verwendet (Netzwerk starten)
+    systemctl enable --now libvirtd
+    sudo virsh net-start default
+
 ### ROM in einer VM-Testen
     qemu-system-x86_64 --enable-kvm --cdrom out/arch-deadc0de_remix_os-20211212-x86_64.iso -boot d -m 8G
 

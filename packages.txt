@@ -67,6 +67,7 @@ ttf-font-awesome ttf-hack ttf-hack-nerd ttf-jetbrains-mono ttf-liberation ttf-me
 ttf-nerd-fonts-symbols-common ttf-nerd-fonts-symbols-mono ttf-opensans ttf-terminus-nerd terminus-font
 v4l2loopback-dkms v4l2loopback-utils v4l-utils linux-headers obs-studio python opencv python-opencv clang flatbuffers python-flatbuffers
 vlc gimp inkscape libheif filezilla gparted code
+virt-manager dnsmasq
 wezterm starship
 wine wine-gecko wine-mono winetricks
 wireguard-tools openfortivpn
