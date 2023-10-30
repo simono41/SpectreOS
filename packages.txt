@@ -73,7 +73,7 @@ wine wine-gecko wine-mono winetricks
 wireguard-tools openfortivpn
 wofi
 wpa_supplicant
-xarchiver
+xarchiver zip
 xdg-desktop-portal-gtk xdg-desktop-portal-wlr
 xdg-user-dirs xdg-user-dirs-gtk
 xorg-server xorg-xinit xorg-drivers xorg-xwayland
