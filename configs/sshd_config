@@ -10,6 +10,8 @@
 # possible, but leave them commented.  Uncommented options override the
 # default value.
 
+AcceptEnv LANG LC_*
+
 Port 1022
 #AddressFamily any
 #ListenAddress 0.0.0.0
