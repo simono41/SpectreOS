@@ -590,7 +590,7 @@ if ! [ -f "/usr/bin/l" ]; then
     ln -s /usr/bin/ls /usr/bin/l
 fi
 
-su ${user} -l -c "chezmoi init -v --apply --force https://git.brothertec.eu/simono41/dotfiles.git"
+su ${user} -l -c "chezmoi init -v --apply --force https://code.brothertec.eu/simono41/dotfiles.git"
 su ${user} -l -c "chezmoi update -v --force"
 
 # https://aur.archlinux.org/packages/ttf-font-nerd-dummy
